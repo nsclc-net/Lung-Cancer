@@ -1,0 +1,2268 @@
+{
+    "color1": "",
+    "color2": "",
+    "color3": "",
+    "color4": "",
+    "color5": "",
+    "siteTitle": "Lung Cancer",
+    "hero": {
+        "title": "肺癌知識網",
+        "backgroundImage": ""
+    },
+    "introduction": {
+        "content": "這是一個關於肺癌知識的網站。",
+        "image": ""
+    },
+    "documents": {
+        "title": "Documents",
+        "items": [
+            {
+                "titles": "優良優可注射液（唯克斯汀）應用於癌症治療之介紹",
+                "author": "Cancerfree",
+                "no": 2063,
+                "date": "2024/11/17 23:49:00",
+                "tags": [
+                    "藥物作用機制",
+                    "抗癌藥物",
+                    "癌症藥物",
+                    "癌症治療",
+                    "肺癌",
+                    "唯克斯汀",
+                    "癌症藥物介紹",
+                    "優可注射液"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "滅必治軟膠囊 (VEPESID CAPSULES) 於癌症治療的應用",
+                "author": "Cancerfree",
+                "no": 2069,
+                "date": "2024/11/17 23:37:00",
+                "tags": [
+                    "肺癌",
+                    "VEPESID CAPSULES 50MG",
+                    "滅必治軟膠囊５０公絲",
+                    "癌症藥物介紹",
+                    "臺灣必治妥施貴寶股份有限公司",
+                    "抗癌症",
+                    "Etoposide",
+                    "BRISTOL ARZNEIMITTEL NIEDERLASSUNG TROISDORF DOR BRISTOL-MYERS SQUIBB GMBH"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "克莫抗癌注射劑 (Kemoplat Injection)在癌症治療中的應用",
+                "author": "Cancerfree",
+                "no": 2073,
+                "date": "2024/11/17 23:36:00",
+                "tags": [
+                    "胃癌",
+                    "抗癌藥物",
+                    "癌症治療",
+                    "繁體中文",
+                    "克莫抗癌注射劑",
+                    "肺癌",
+                    "肝癌",
+                    "乳癌",
+                    "食道癌",
+                    "癌症藥物介紹",
+                    "藥物教程"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "汰癌勝注射劑在癌症中的應用",
+                "author": "Cancerfree",
+                "no": 2040,
+                "date": "2024/11/11 12:18:01",
+                "tags": [
+                    "胃癌",
+                    "癌症藥物",
+                    "醫藥",
+                    "化學療法",
+                    "帕特癌注射液",
+                    "肺癌",
+                    "藥物研究",
+                    "卵巢癌",
+                    "胰臟癌",
+                    "食道癌",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "維諾拜注射液在癌症治療中的應用",
+                "author": "Cancerfree",
+                "no": 2084,
+                "date": "2024/11/11 11:18:00",
+                "tags": [
+                    "藥物作用機制",
+                    "癌症治療",
+                    "非小細胞肺癌",
+                    "維諾拜注射液",
+                    "臨床研究",
+                    "癌症藥物介紹",
+                    "費森尤斯卡比",
+                    "VINORELBINE TARTRATE",
+                    "移轉性乳癌",
+                    "藥物使用注意"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Breast Cancer"
+                ]
+            },
+            {
+                "titles": "文克斯汀注射液（Vincristine Sulphate Injection）對癌症的治療效果",
+                "author": "Cancerfree",
+                "no": 2025,
+                "date": "2024/11/11 10:58:29",
+                "tags": [
+                    "化療",
+                    "肺癌",
+                    "Lung Cancer",
+                    "德爾達注射液",
+                    "VINCRISTINE SULPHATE",
+                    "癌症藥物介紹",
+                    "鴻晟實業",
+                    "PHARMACIA"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "景德 惠康注射劑 (Vincristine sulfate)在癌症治療中的應用",
+                "author": "Cancerfree",
+                "no": 2111,
+                "date": "2024/11/11 10:35:00",
+                "tags": [
+                    "硫酸氧化長春花",
+                    "乳癌",
+                    "白血病",
+                    "癌症藥物介紹",
+                    "抗腫瘍劑",
+                    "腦癌"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Breast Cancer",
+                    "Brain tumor",
+                    "Leukemia"
+                ]
+            },
+            {
+                "titles": "愛寧達注射劑 （Alimta for Injection）在癌症治療中的作用",
+                "author": "Cancerfree",
+                "no": 2130,
+                "date": "2024/11/11 10:08:00",
+                "tags": [
+                    "藥物介紹",
+                    "藥物作用機制",
+                    "化療",
+                    "抗癌藥物",
+                    "藥物資訊",
+                    "癌症治療",
+                    "癌症",
+                    "藥物",
+                    "肺癌",
+                    "非小細胞肺癌",
+                    "肺癌治療",
+                    "醫藥資訊",
+                    "愛寧達",
+                    "癌症藥物介紹",
+                    "PEMETREXED DISODIUM HEPTAHYDRATE"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "癌沛特山德士注射劑對於癌症治療的應用",
+                "author": "Cancerfree",
+                "no": 2132,
+                "date": "2024/11/11 10:06:00",
+                "tags": [
+                    "lung cancer",
+                    "chemotherapy",
+                    "cancer treatment",
+                    "癌症藥物介紹",
+                    "Pemetrexed Sandoz",
+                    "non-small-cell lung carcinoma"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "派得健凍晶注射劑（PEMGEM）在癌症治療中的應用",
+                "author": "Cancerfree",
+                "no": 2135,
+                "date": "2024/11/11 10:01:00",
+                "tags": [
+                    "藥物治療",
+                    "非小細胞肺癌",
+                    "肺癌治療",
+                    "派得健凍晶注射劑100毫克",
+                    "PEMGEM100",
+                    "癌症藥物介紹",
+                    "質子跑馬賽鹼鈉七水合物"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "卡比倍莫舒癌注射劑在癌症治療中的應用",
+                "author": "Cancerfree",
+                "no": 2137,
+                "date": "2024/11/11 09:58:00",
+                "tags": [
+                    "化療",
+                    "藥物",
+                    "肺癌",
+                    "非小細胞肺癌",
+                    "疾病治療",
+                    "癌症藥物介紹",
+                    "卡比-倍莫舒癌注射劑",
+                    "Pemetrexed Kabi",
+                    "腫瘤療法"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "沛美曲賽凍晶注射劑在癌症治療中的應用",
+                "author": "Cancerfree",
+                "no": 2138,
+                "date": "2024/11/11 09:56:00",
+                "tags": [
+                    "抗癌藥物",
+                    "藥物治療",
+                    "肺癌",
+                    "非小細胞肺癌",
+                    "肺癌治療",
+                    "沛美曲賽凍晶注射劑",
+                    "癌症藥物介紹",
+                    "輝瑞大藥廠股份有限公司",
+                    "侵襲性肋膜間質細胞瘤"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "伏肺瘤凍晶注射劑 (Apeta Lyo-Injection) 在癌症中的應用",
+                "author": "Cancerfree",
+                "no": 2139,
+                "date": "2024/11/11 09:55:00",
+                "tags": [
+                    "化療",
+                    "肺癌治療",
+                    "伏肺瘤凍晶注射劑",
+                    "癌症藥物介紹",
+                    "永信藥品",
+                    "PEMETREXED DISODIUM HEPTAHYDRATE"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "霖揚培美曲塞凍晶注射劑(Pemetrexed Lyophilized Injection)在癌症治療中的應用",
+                "author": "Cancerfree",
+                "no": 2143,
+                "date": "2024/11/11 09:50:00",
+                "tags": [
+                    "化療",
+                    "抗癌藥物",
+                    "非小細胞肺癌",
+                    "Pemetrexed",
+                    "癌症藥物介紹",
+                    "霖揚培美曲塞",
+                    "鱗狀細胞"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "「健亞」紫杉醇（Paclitaxel）於癌症中的治療效果",
+                "author": "Cancerfree",
+                "no": 2163,
+                "date": "2024/11/11 09:24:00",
+                "tags": [
+                    "藥物介紹",
+                    "抗癌藥物",
+                    "癌症治療",
+                    "紫杉醇",
+                    "健亞",
+                    "肺癌",
+                    "藥物研究",
+                    "醫藥資訊",
+                    "卵巢癌",
+                    "PACLITAXEL",
+                    "疾病治療",
+                    "用藥指南",
+                    "胰臟癌",
+                    "乳癌",
+                    "臨床研究",
+                    "食道癌"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "永日派立達師 (PACLITAXEL \"YUNG-ZIP\") 抗癌藥物全面介紹",
+                "author": "Cancerfree",
+                "no": 2164,
+                "date": "2024/11/11 09:23:00",
+                "tags": [
+                    "胃癌",
+                    "藥物作用機制",
+                    "抗癌藥物",
+                    "癌症治療",
+                    "肺癌",
+                    "卵巢癌",
+                    "胰腺癌",
+                    "食道癌",
+                    "癌症藥物介紹",
+                    "藥物敏感性",
+                    "派立達師 (PACLITAXEL)",
+                    "永日化學工業股份有限公司"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "派力杉注射劑 (Paclitaxel Mylan) 在肺癌、食道癌、卵巢癌、胃癌、胰臟癌等疾病治療中的應用",
+                "author": "Cancerfree",
+                "no": 2165,
+                "date": "2024/11/11 09:21:00",
+                "tags": [
+                    "化療",
+                    "癌症治療",
+                    "派力杉注射劑",
+                    "Paclitaxel Mylan",
+                    "肺癌",
+                    "卵巢癌",
+                    "胰臟癌",
+                    "乳癌",
+                    "食道癌",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "泰格莎膜衣錠40毫克(TAGRISSO Film-coated Tablets 40 mg)在肺癌治療的全面介紹",
+                "author": "Cancerfree",
+                "no": 2189,
+                "date": "2024/11/11 06:31:00",
+                "tags": [
+                    "藥物介紹",
+                    "藥物作用機制",
+                    "肺癌",
+                    "非小細胞肺癌",
+                    "泰格莎膜衣錠40毫克",
+                    "臨床研究",
+                    "癌症藥物介紹",
+                    "EGFR突變陽性",
+                    "藥物指導"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "泰格莎膜衣錠80毫克 (TAGRISSO Film-coated Tablets 80 mg) 用於肺癌治療的全面介紹",
+                "author": "Cancerfree",
+                "no": 2190,
+                "date": "2024/11/11 06:30:00",
+                "tags": [
+                    "口服藥物",
+                    "肺癌",
+                    "非小細胞肺癌",
+                    "肺癌治療",
+                    "泰格莎膜衣錠80毫克",
+                    "EGFR突變",
+                    "第一線治療",
+                    "輔助治療",
+                    "癌症藥物介紹",
+                    "照顧指南",
+                    "Osimertinib mesylate"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "百博愛諾康靜脈輸注濃縮液20毫克/毫升 (Irinotecan BioPro 20mg/ml，concentrate for solution for infusion) 細緻介紹",
+                "author": "Cancerfree",
+                "no": 2217,
+                "date": "2024/11/11 05:59:00",
+                "tags": [
+                    "化療",
+                    "百博愛諾康",
+                    "靜脈輸注濃縮液",
+                    "大腸癌",
+                    "5-FU",
+                    "癌症藥物介紹",
+                    "IRINOTECAN HYDROCHLORIDE TRIHYDRATE",
+                    "晚期",
+                    "第一線治療藥物",
+                    "FOLINIC ACID"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Lung Cancer",
+                    "Pancreatic Cancer",
+                    "Colorectal Cancer"
+                ]
+            },
+            {
+                "titles": "怡瑞納靜脈注射劑 (Irenax Injection 40mg/100mg)：肺癌、大腸癌、胃癌與胰臟癌治療的導讀",
+                "author": "Cancerfree",
+                "no": 2218,
+                "date": "2024/11/11 05:57:00",
+                "tags": [
+                    "胃癌",
+                    "藥物介紹",
+                    "適應症",
+                    "肺癌",
+                    "胰臟癌",
+                    "大腸癌",
+                    "癌症藥物介紹",
+                    "用藥須知",
+                    "臨床研究與實證",
+                    "Irenax Injection 40mg/100mg"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Lung Cancer",
+                    "Pancreatic Cancer",
+                    "Colorectal Cancer"
+                ]
+            },
+            {
+                "titles": "癌治佳靜脈輸注濃縮液 (Irinotel Injection) 深度藥品解析",
+                "author": "Cancerfree",
+                "no": 2219,
+                "date": "2024/11/11 05:56:00",
+                "tags": [
+                    "胃癌",
+                    "抗癌藥物",
+                    "治療",
+                    "藥物",
+                    "藥理學",
+                    "癌治佳靜脈輸注濃縮液",
+                    "肺癌",
+                    "胰臟癌",
+                    "大腸癌",
+                    "葉酸",
+                    "癌症藥物介紹",
+                    "IRINOTECAN HYDROCHLORIDE TRIHYDRATE",
+                    "五氟尿嘧啶"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Lung Cancer",
+                    "Pancreatic Cancer",
+                    "Colorectal Cancer"
+                ]
+            },
+            {
+                "titles": "醫學專文：深度解析“美時”瑞諾克靜脈輸注液（Irinotecan Solution for I.V. Infusion “LOTUS”）",
+                "author": "Cancerfree",
+                "no": 2224,
+                "date": "2024/11/11 05:50:00",
+                "tags": [
+                    "胃癌",
+                    "化療",
+                    "醫學",
+                    "藥物治療",
+                    "腫瘤",
+                    "Chemotherapy",
+                    "肺癌",
+                    "胰腺癌",
+                    "腸癌",
+                    "大腸直腸癌",
+                    "美時瑞諾克靜脈輸注液",
+                    "癌症藥物介紹",
+                    "cancer drug",
+                    "失敗療程"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Lung Cancer",
+                    "Pancreatic Cancer",
+                    "Colorectal Cancer"
+                ]
+            },
+            {
+                "titles": "益立諾靜脈輸注液：晚期大腸癌、胃癌、胰臟癌治療解析",
+                "author": "Cancerfree",
+                "no": 2226,
+                "date": "2024/11/11 05:48:00",
+                "tags": [
+                    "胃癌",
+                    "癌症治療",
+                    "益立諾",
+                    "靜脈輸注液",
+                    "胰臟癌",
+                    "大腸直腸癌",
+                    "癌症藥物介紹",
+                    "臺灣東洋藥品工業股份有限公司",
+                    "IRINOTECAN HYDROCHLORIDE TRIHYDRATE"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Lung Cancer",
+                    "Pancreatic Cancer",
+                    "Colorectal Cancer"
+                ]
+            },
+            {
+                "titles": "安能得微脂體注射劑的全面介紹",
+                "author": "Cancerfree",
+                "no": 2228,
+                "date": "2024/11/11 05:46:00",
+                "tags": [
+                    "胃癌",
+                    "藥物介紹",
+                    "癌症治療",
+                    "安能得微脂體注射劑",
+                    "肺癌",
+                    "胰腺癌",
+                    "結直腸癌",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Lung Cancer",
+                    "Pancreatic Cancer",
+                    "Colorectal Cancer"
+                ]
+            },
+            {
+                "titles": "健米喜凍晶注射劑——全方位探討其在抗癌治療中的角色",
+                "author": "Cancerfree",
+                "no": 2237,
+                "date": "2024/11/11 05:35:00",
+                "tags": [
+                    "化療藥物",
+                    "癌症治療",
+                    "健米喜凍晶注射劑",
+                    "藥物導覽",
+                    "癌症藥物介紹",
+                    "中文醫學資訊"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Bladder Cancer"
+                ]
+            },
+            {
+                "titles": "精讀“卡比”健彌達靜脈凍晶注射劑（Gemita Lyophilized for Injection）用於治療各種癌症",
+                "author": "Cancerfree",
+                "no": 2239,
+                "date": "2024/11/11 05:33:00",
+                "tags": [
+                    "癌症",
+                    "藥物",
+                    "Gemcitabine",
+                    "健彌達靜脈凍晶注射劑",
+                    "非小細胞肺癌",
+                    "胰臟癌",
+                    "乳癌",
+                    "膀胱癌",
+                    "breast cancer",
+                    "癌症藥物介紹",
+                    "台灣費森尤斯卡比股份有限公司",
+                    "卡比",
+                    "long cancer"
+                ],
+                "website": [
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "健達必凍晶注射劑 (DBL Gemcitabine For Injection)：在癌症治療中的優勢與適用症狀",
+                "author": "Cancerfree",
+                "no": 2240,
+                "date": "2024/11/11 05:32:00",
+                "tags": [
+                    "癌症治療",
+                    "健達必凍晶注射劑",
+                    "非小細胞肺癌",
+                    "DBL Gemcitabine",
+                    "卵巢癌",
+                    "胰臟癌",
+                    "乳癌",
+                    "膀胱癌",
+                    "癌症藥物介紹",
+                    "Gemcitabine hydrochloride"
+                ],
+                "website": [
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "健彌達靜脈凍晶注射劑 (Gemita for I.V. Lyophilized Injection): 治療肺癌、乳癌、食管癌、卵巢癌、肝癌和胰臟癌的全面介紹",
+                "author": "Cancerfree",
+                "no": 2241,
+                "date": "2024/11/11 05:31:00",
+                "tags": [
+                    "藥物介紹",
+                    "癌症治療",
+                    "健彌達靜脈凍晶注射劑",
+                    "非小細胞肺癌",
+                    "胰臟癌",
+                    "臨床研究",
+                    "癌症藥物介紹",
+                    "用藥須知",
+                    "藥物機制",
+                    "藥物適用"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Breast Cancer",
+                    "Non-small cell Lung Cancer",
+                    "Bladder Cancer"
+                ]
+            },
+            {
+                "titles": "健擇注射劑 (Gemzar) 於不同癌症治療的全面介紹",
+                "author": "Cancerfree",
+                "no": 2242,
+                "date": "2024/11/11 05:30:00",
+                "tags": [
+                    "抗癌藥物",
+                    "癌症",
+                    "藥物治療",
+                    "健擇注射劑",
+                    "癌症藥物介紹",
+                    "藥物應用",
+                    "治療原則"
+                ],
+                "website": [
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "健仕注射液38毫克/毫升 (Gemmis Injection 38 mg/ml) 和其在癌症治療中的應用",
+                "author": "Cancerfree",
+                "no": 2244,
+                "date": "2024/11/11 05:27:00",
+                "tags": [
+                    "Chemotherapy",
+                    "Gemcitabine",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Esophageal Cancer",
+                    "Breast Cancer",
+                    "癌症藥物介紹",
+                    "Liver Cancer"
+                ],
+                "website": [
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "健特瑞凍晶注射劑 (Gemtero (Gemcitabine for Injection)) 用於肺癌、乳癌、食道癌、卵巢癌、肝癌、胰臟癌的治療",
+                "author": "Cancerfree",
+                "no": 2246,
+                "date": "2024/11/11 05:25:00",
+                "tags": [
+                    "抗癌藥物",
+                    "肺癌",
+                    "肝癌",
+                    "Gemcitabine",
+                    "Gemtero",
+                    "非小細胞肺癌",
+                    "卵巢癌",
+                    "胰臟癌",
+                    "乳癌",
+                    "膀胱癌",
+                    "食道癌",
+                    "癌症藥物介紹",
+                    "HETERO LABS LIMITED",
+                    "凱沛爾藥品"
+                ],
+                "website": [
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "健達必注射劑 (DBL Gemcitabine for Injection) 的應用與治療目標",
+                "author": "Cancerfree",
+                "no": 2248,
+                "date": "2024/11/11 05:23:00",
+                "tags": [
+                    "藥物介紹",
+                    "癌症治療",
+                    "癌症",
+                    "肺癌",
+                    "健達必注射劑",
+                    "Gemcitabine",
+                    "卵巢癌",
+                    "輝瑞",
+                    "乳癌",
+                    "膀胱癌",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "癌妥滅靜脈注射液100毫克：對抗肺癌的關鍵武器",
+                "author": "Cancerfree",
+                "no": 2261,
+                "date": "2024/11/11 05:07:00",
+                "tags": [
+                    "藥物介紹",
+                    "抗癌藥",
+                    "肺癌",
+                    "癌妥滅靜脈注射液",
+                    "臨床研究",
+                    "癌症藥物介紹",
+                    "治療適應症",
+                    "用藥須知",
+                    "總結展望"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "醫百幸注射劑20公絲/公撮 (Eposin Concentrate For Infusion Solution 20mg/ml) 應用於肺癌療法的全面介紹",
+                "author": "Cancerfree",
+                "no": 2262,
+                "date": "2024/11/11 05:06:00",
+                "tags": [
+                    "藥物介紹",
+                    "癌症",
+                    "醫百幸注射劑",
+                    "癌症藥物介紹",
+                    "肺癌療法"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "易克癌靜脈注射液100公絲 (ETOPOSIDE PIERRE FABRE IV INFUSION 100MG/5ML) 介紹及在肺癌治療中的應用",
+                "author": "Cancerfree",
+                "no": 2264,
+                "date": "2024/11/11 05:04:00",
+                "tags": [
+                    "化療",
+                    "抗癌藥物",
+                    "癌症治療",
+                    "肺癌",
+                    "作用機制",
+                    "ETOPOSIDE PIERRE FABRE IV INFUSION 100MG/5ML",
+                    "臨床研究",
+                    "癌症藥物介紹",
+                    "易克癌靜脈注射液１００公絲",
+                    "誼澤股份有限公司",
+                    "PIERRE FABRE MEDICAMENT PRODUCTION"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "「義大利」得舒緩膜衣錠 150 毫克 (Tarceva Film-coated tablets 150mg) 研究探討",
+                "author": "Cancerfree",
+                "no": 2272,
+                "date": "2024/11/11 04:52:00",
+                "tags": [
+                    "醫學",
+                    "藥物治療",
+                    "肺癌",
+                    "非小細胞肺癌",
+                    "lung cancer",
+                    "NSCLC",
+                    "胰腺癌",
+                    "癌症藥物介紹",
+                    "EGFR-TK突變",
+                    "EGFR-TK",
+                    "pancreatic cancer",
+                    "維持治療"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Pancreatic Cancer"
+                ]
+            },
+            {
+                "titles": "深入解析：帝寧膜衣錠150毫克對於肺癌及胰臟癌的治療",
+                "author": "Cancerfree",
+                "no": 2281,
+                "date": "2024/11/11 04:41:00",
+                "tags": [
+                    "藥物介紹",
+                    "肺癌",
+                    "Lung Cancer",
+                    "胰臟癌",
+                    "Pancreatic Cancer",
+                    "Erlotinib Sandoz",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Pancreatic Cancer"
+                ]
+            },
+            {
+                "titles": "帝寧膜衣錠100毫克（Erlotinib）：肺癌和胰臟癌的精準治療利器",
+                "author": "Cancerfree",
+                "no": 2282,
+                "date": "2024/11/11 04:40:00",
+                "tags": [
+                    "癌症",
+                    "非小細胞肺癌",
+                    "Erlotinib",
+                    "帝寧膜衣錠",
+                    "胰臟癌",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Pancreatic Cancer"
+                ]
+            },
+            {
+                "titles": "瑞士得舒緩膜衣錠100毫克 (Tarceva Film-coated tablets 100mg)：癌症治療的重要工具",
+                "author": "Cancerfree",
+                "no": 2289,
+                "date": "2024/11/11 04:32:00",
+                "tags": [
+                    "化療",
+                    "治療藥物",
+                    "癌症",
+                    "腫瘤",
+                    "非小細胞肺癌",
+                    "瑞士得舒緩膜衣錠100毫克",
+                    "胰臟癌",
+                    "癌症藥物介紹",
+                    "EGFR-TK突變",
+                    "Tarceva Film-coated tablets 100mg"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Pancreatic Cancer"
+                ]
+            },
+            {
+                "titles": "瑞士得舒緩膜衣錠25毫克 (Tarceva Film-coated tablets 25mg) 治療肺癌，胰腺癌的多面解析",
+                "author": "Cancerfree",
+                "no": 2290,
+                "date": "2024/11/11 04:30:00",
+                "tags": [
+                    "癌症治療",
+                    "藥物治療",
+                    "肺癌",
+                    "非小細胞肺癌",
+                    "瑞士得舒緩膜衣錠25毫克",
+                    "Tarceva",
+                    "胰腺癌",
+                    "癌症藥物介紹",
+                    "EGFR-TK突變",
+                    "肺腺癌",
+                    "ERLOTINIB HYDROCHLORIDE",
+                    "羅氏大藥廠"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Pancreatic Cancer"
+                ]
+            },
+            {
+                "titles": "阿雷素凍晶注射劑５０公絲/小瓶 (DOXORUBICIN HCL FOR INJECTION",
+                "author": "Cancerfree",
+                "no": 2297,
+                "date": "2024/11/11 04:18:00",
+                "tags": [
+                    "癌症治療",
+                    "肺癌",
+                    "阿雷素",
+                    "乳癌",
+                    "淋巴瘤",
+                    "癌症藥物介紹",
+                    "海喬國際股份有限公司",
+                    "DOXORUBICIN HCL",
+                    "白血球過多症",
+                    "硬瘤",
+                    "軟纖維性肉瘤",
+                    "交感神經母細胞瘤",
+                    "PHARMACHEMIE B.V"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Breast Cancer"
+                ]
+            },
+            {
+                "titles": "得甦幸注射劑 (DOXORUBICIN HYDROCHLORIDE INJECTION 2MG/ML) 用於肺癌、乳癌、卵巢癌、胃癌、肝癌的綜合介紹",
+                "author": "Cancerfree",
+                "no": 2299,
+                "date": "2024/11/11 04:15:00",
+                "tags": [
+                    "胃癌",
+                    "抗癌藥物",
+                    "癌症治療",
+                    "得甦幸注射劑",
+                    "DOXORUBICIN HYDROCHLORIDE INJECTION 2MG/ML",
+                    "肺癌",
+                    "肝癌",
+                    "卵巢癌",
+                    "乳癌",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Breast Cancer"
+                ]
+            },
+            {
+                "titles": "待明必信靜脈凍晶注射劑１０公絲：深度瞭解乳癌、肺癌等癌症治療新選擇",
+                "author": "Cancerfree",
+                "no": 2300,
+                "date": "2024/11/11 04:14:00",
+                "tags": [
+                    "癌症治療",
+                    "Doxorubicin",
+                    "肺癌",
+                    "作用機制",
+                    "乳癌",
+                    "臨床研究",
+                    "癌症藥物介紹",
+                    "治療適應症",
+                    "用藥須知",
+                    "藥物概述",
+                    "待明必信"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Breast Cancer"
+                ]
+            },
+            {
+                "titles": "速溶艾黴素注射劑50公絲 (ADRIBLASTINA RAPID DISSOLUTION 50MG)：一種針對肺癌、乳癌、卵巢癌、胃癌、肝癌的綜合介紹",
+                "author": "Cancerfree",
+                "no": 2303,
+                "date": "2024/11/11 04:11:00",
+                "tags": [
+                    "胃癌",
+                    "化療藥物",
+                    "肺癌",
+                    "肝癌",
+                    "卵巢癌",
+                    "乳癌",
+                    "ADRIBLASTINA RAPID DISSOLUTION 50MG",
+                    "癌症藥物介紹",
+                    "輝瑞大藥廠股份有限公司",
+                    "速溶艾黴素注射劑50公絲"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Breast Cancer"
+                ]
+            },
+            {
+                "titles": "達必素注射劑 (Doxorubicin-Bristol)：一種多元癌症治療藥物的全面介紹",
+                "author": "Cancerfree",
+                "no": 2305,
+                "date": "2024/11/11 04:08:00",
+                "tags": [
+                    "胃癌",
+                    "藥物介紹",
+                    "癌症治療",
+                    "達必素注射劑",
+                    "DOXORUBICIN-BRISTOL",
+                    "肺癌",
+                    "肝癌",
+                    "卵巢癌",
+                    "乳癌",
+                    "臨床研究",
+                    "癌症藥物介紹",
+                    "藥物機制"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Breast Cancer"
+                ]
+            },
+            {
+                "titles": "艾黴素注射劑 (Adriblastina) 在肺癌、乳癌、卵巢癌、胃癌和肝癌中的應用",
+                "author": "Cancerfree",
+                "no": 2308,
+                "date": "2024/11/11 03:54:00",
+                "tags": [
+                    "胃癌",
+                    "藥物介紹",
+                    "癌症治療",
+                    "艾黴素注射劑",
+                    "肺癌",
+                    "肝癌",
+                    "ADRIBLASTINA",
+                    "卵巢癌",
+                    "作用機制",
+                    "乳癌",
+                    "臨床研究",
+                    "癌症藥物介紹",
+                    "用藥須知"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Breast Cancer"
+                ]
+            },
+            {
+                "titles": "力得微脂體注射劑2毫克/毫升 (鹽酸杜薩魯比辛)：一種用於治療多種癌症的藥物介紹",
+                "author": "Cancerfree",
+                "no": 2309,
+                "date": "2024/11/11 03:53:00",
+                "tags": [
+                    "胃癌",
+                    "癌症藥物",
+                    "癌症治療",
+                    "力得微脂體注射劑",
+                    "適應症",
+                    "肺癌",
+                    "肝癌",
+                    "藥物簡介",
+                    "卵巢癌",
+                    "藥物用法",
+                    "作用機制",
+                    "乳癌",
+                    "臨床研究",
+                    "癌症藥物介紹",
+                    "杜薩魯比辛"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Breast Cancer"
+                ]
+            },
+            {
+                "titles": "全面介紹利癌凍晶注射劑10毫克 (多索如比辛)：用於治療多種癌症的關鍵藥物",
+                "author": "Cancerfree",
+                "no": 2310,
+                "date": "2024/11/11 03:52:00",
+                "tags": [
+                    "多索如比辛",
+                    "肺癌",
+                    "利癌凍晶注射劑10毫克",
+                    "乳癌",
+                    "淋巴瘤",
+                    "癌症藥物介紹",
+                    "南光化學製藥股份有限公司",
+                    "硬瘤",
+                    "軟纖維性肉瘤",
+                    "交感神經母細胞瘤",
+                    "急慢性白血球過多症"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Breast Cancer"
+                ]
+            },
+            {
+                "titles": "剋癌易注射劑 (TAXOTERE CONCENTRATE AND SOLVENT FOR SOLUTION FOR INFUSION): 乳癌、非小細胞肺癌、前列腺癌、胃腺癌、頭頸癌治療的全面導讀",
+                "author": "Cancerfree",
+                "no": 2322,
+                "date": "2024/11/11 03:37:00",
+                "tags": [
+                    "非小細胞肺癌",
+                    "剋癌易注射劑",
+                    "賽諾菲",
+                    "前列腺癌",
+                    "乳癌",
+                    "頭頸癌",
+                    "TAXOTERE CONCENTRATE AND SOLVENT FOR SOLUTION FOR INFUSION",
+                    "藥物敏感性測試",
+                    "癌症藥物介紹",
+                    "胃腺癌",
+                    "AVENTIS PHARMA",
+                    "DOCETAXEL"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "「永信」活克癌注射液20毫克/毫升 (Nolbaxol Injection 20mg/ml \\\"Yung Shin\\\")對於肺癌、乳癌、食管癌和攝護腺癌的全面介紹",
+                "author": "Cancerfree",
+                "no": 2323,
+                "date": "2024/11/11 03:35:00",
+                "tags": [
+                    "化療",
+                    "癌症治療",
+                    "肺癌",
+                    "攝護腺癌",
+                    "多西他賽",
+                    "乳癌",
+                    "食管癌",
+                    "永信藥品工業股份有限公司",
+                    "癌症藥物介紹",
+                    "永信活克癌注射液"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "鈦能注射劑：多種癌症之關鍵治療藥物",
+                "author": "Cancerfree",
+                "no": 2324,
+                "date": "2024/11/11 03:34:00",
+                "tags": [
+                    "非小細胞肺癌",
+                    "鈦能注射劑",
+                    "前列腺癌",
+                    "乳癌",
+                    "頭頸癌",
+                    "癌症藥物介紹",
+                    "DOCETAXEL ANHYDROUS",
+                    "胃腺癌",
+                    "臺灣東洋藥品工業股份有限公司"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "癌克定注射劑 40 毫克/毫升 (Isotera concentrate for infusion 40mg/ml): 乳癌、非小細胞肺癌、前列腺癌、頭頸癌、胃腺癌之治療藥物",
+                "author": "Cancerfree",
+                "no": 2326,
+                "date": "2024/11/11 03:32:00",
+                "tags": [
+                    "抗癌藥",
+                    "非小細胞肺癌",
+                    "前列腺癌",
+                    "乳癌",
+                    "頭頸癌",
+                    "癌克定",
+                    "癌症藥物介紹",
+                    "胃腺癌",
+                    "DOCETAXEL",
+                    "南光化學製藥股份有限公司"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "癌斯汰注射液20毫克/毫升 (Docetaxel Concentrate for Solution for Infusion 20mg/ml \"CYH\") 全面介紹",
+                "author": "Cancerfree",
+                "no": 2328,
+                "date": "2024/11/11 03:30:00",
+                "tags": [
+                    "非小細胞肺癌",
+                    "docetaxel",
+                    "前列腺癌",
+                    "乳癌",
+                    "頭頸癌",
+                    "癌斯汰",
+                    "癌症藥物介紹",
+                    "胃腺癌",
+                    "中化裕民健康事業股份有限公司",
+                    "Sindan Pharma"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "『霖揚』多賜特舒注射液20毫克/毫升 (Docetaxel Injection 20mg/mL \"GBC\") 綜述",
+                "author": "Cancerfree",
+                "no": 2334,
+                "date": "2024/11/11 03:23:00",
+                "tags": [
+                    "藥物介紹",
+                    "藥物作用機制",
+                    "癌症治療",
+                    "非小細胞肺癌",
+                    "乳腺癌",
+                    "微管抑制",
+                    "前列腺癌",
+                    "多賜特舒",
+                    "頭頸癌",
+                    "臨床研究",
+                    "癌症藥物介紹",
+                    "胃腺癌",
+                    "霖揚生技製藥股份有限公司",
+                    "藥物綜述"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "癌克定單支注射液20毫克/毫升對於癌症治療的全方位介紹",
+                "author": "Cancerfree",
+                "no": 2336,
+                "date": "2024/11/11 03:21:00",
+                "tags": [
+                    "癌症治療",
+                    "作用機理",
+                    "非小細胞肺癌",
+                    "藥物知識",
+                    "前列腺癌",
+                    "乳癌",
+                    "頭頸癌",
+                    "臨床研究",
+                    "癌症藥物介紹",
+                    "胃腺癌",
+                    "癌克定單支注射液"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "克莫抗癌注射劑1毫克/毫升 (Kemoplat Injection 1mg/ml): 一個全面的介紹",
+                "author": "Cancerfree",
+                "no": 2340,
+                "date": "2024/11/11 03:14:00",
+                "tags": [
+                    "藥物介紹",
+                    "癌症治療",
+                    "克莫抗癌注射劑",
+                    "作用機制",
+                    "藥物敏感性測試",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "深入認識鉑帝爾凍晶靜脈注射劑於癌症治療中的應用與特性",
+                "author": "Cancerfree",
+                "no": 1779,
+                "date": "2024/11/11 03:13:46",
+                "tags": [
+                    "癌症治療",
+                    "鉑帝爾凍晶靜脈注射劑",
+                    "癌症藥物介紹",
+                    "轉移性睪丸腫瘤",
+                    "轉移性卵巢腫瘤",
+                    "台灣必治妥施貴寶股份有限公司",
+                    "轉移性膀胱內型細胞腫瘤"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "希思鉑定注射液 : 癌症治療的重要利器",
+                "author": "Cancerfree",
+                "no": 1778,
+                "date": "2024/11/11 03:11:57",
+                "tags": [
+                    "胃癌",
+                    "癌症治療",
+                    "希思鉑定注射液",
+                    "肺癌",
+                    "肝癌",
+                    "CISPLATIN INJECTION 1MG/ML",
+                    "乳腺癌",
+                    "作用機制",
+                    "食道癌",
+                    "癌症藥物介紹",
+                    "抗惡性腫瘍劑",
+                    "輝瑞大藥廠股份有限公司",
+                    "治療適應症"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "普樂得星凍晶注射劑25公絲: 一種用於治療多種癌症的藥物的綜述",
+                "author": "Cancerfree",
+                "no": 2359,
+                "date": "2024/11/11 02:49:00",
+                "tags": [
+                    "胃癌",
+                    "藥物介紹",
+                    "化療",
+                    "普樂得星凍晶注射劑２５公絲",
+                    "肺癌",
+                    "肝癌",
+                    "乳癌",
+                    "食道癌",
+                    "癌症藥物介紹",
+                    "轉移性睪丸腫瘤",
+                    "民橋企業股份有限公司",
+                    "卵巢腫瘤"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "卡伯拉丁注射液(Carboplatin Injection “DBL”)對於肺癌、食道癌、卵巢癌的適應症與治療概述",
+                "author": "Cancerfree",
+                "no": 2370,
+                "date": "2024/11/11 02:37:00",
+                "tags": [
+                    "癌症",
+                    "藥物治療",
+                    "肺癌",
+                    "卵巢癌",
+                    "作用機制",
+                    "卡伯拉丁注射液",
+                    "臨床研究",
+                    "食道癌",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "深入解析「杏輝」剋鉑停靜脈注射液對於肺癌、食道癌及卵巢癌的治療",
+                "author": "Cancerfree",
+                "no": 2373,
+                "date": "2024/11/11 02:34:00",
+                "tags": [
+                    "藥物作用機制",
+                    "抗癌藥物",
+                    "癌症治療",
+                    "杏輝",
+                    "肺癌",
+                    "卵巢癌",
+                    "食道癌",
+                    "癌症藥物介紹",
+                    "剋鉑停靜脈注射液10毫克/毫升"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Esophageal Cancer"
+                ]
+            },
+            {
+                "titles": "癌必定膜衣錠 (CABOMETYX)的介紹",
+                "author": "Cancerfree",
+                "no": 2378,
+                "date": "2024/11/11 02:27:00",
+                "tags": [
+                    "癌症治療",
+                    "口服藥物",
+                    "CABOMETYX",
+                    "腎細胞癌",
+                    "肝細胞癌",
+                    "甲狀腺癌",
+                    "癌症藥物介紹",
+                    "Cabozantinib",
+                    "IPSEN PHARMA",
+                    "法商益普生股份有限公司台灣分公司",
+                    "PATHEON INC.",
+                    "TJOAPACK NETHERLANDS B.V.",
+                    "裕利股份有限公司"
+                ],
+                "website": [
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Prostate Cancer"
+                ]
+            },
+            {
+                "titles": "積極對抗肺癌： 安立適膠囊 (ALECENSA capsules) 的用藥解析",
+                "author": "Cancerfree",
+                "no": 2393,
+                "date": "2024/11/11 02:11:00",
+                "tags": [
+                    "安立適膠囊150毫克",
+                    "非小細胞肺癌",
+                    "肺癌藥物",
+                    "ALK陽性",
+                    "癌症藥物介紹",
+                    "ALECENSA 150mg capsules"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "福特喜膠囊 (FLACIL CAPSULES)：全方位治療癌症的佳選",
+                "author": "Cancerfree",
+                "no": 2394,
+                "date": "2024/11/11 02:07:00",
+                "tags": [
+                    "福特喜膠囊",
+                    "胃癌",
+                    "藥物介紹",
+                    "癌症治療",
+                    "肺癌",
+                    "肝癌",
+                    "卵巢癌",
+                    "胰臟癌",
+                    "乳癌",
+                    "大腸直腸癌",
+                    "食管癌",
+                    "生達化學製藥股份有限公司",
+                    "癌症藥物介紹",
+                    "Flacil"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer"
+                ]
+            },
+            {
+                "titles": "肺癌免疫治療：新時代的醫療新展望",
+                "author": "Cancerfree",
+                "no": 2414,
+                "date": "2024/11/01 00:21:00",
+                "tags": [
+                    "治療",
+                    "肺癌",
+                    "免疫治療",
+                    "記者專文",
+                    "醫療新展望",
+                    "晚期肺癌醫療"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "肺癌標靶藥物的工作原理及效果",
+                "author": "Cancerfree",
+                "no": 2413,
+                "date": "2024/11/01 00:21:00",
+                "tags": [
+                    "副作用",
+                    "化療",
+                    "癌症治療",
+                    "肺癌",
+                    "標靶藥物",
+                    "醫療技術",
+                    "基因組"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "癌症的質子治療",
+                "author": "Cancerfree",
+                "no": 2436,
+                "date": "2024/11/01 00:05:00",
+                "tags": [
+                    "癌症治療",
+                    "癌症",
+                    "質子治療"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "營養補充品對癌症的影響與作用：左旋麩醯胺酸、B12、維他命C、維他命B群、中藥、魚油",
+                "author": "Cancerfree",
+                "no": 2439,
+                "date": "2024/10/31 23:08:00",
+                "tags": [
+                    "癌症",
+                    "健康",
+                    "中藥",
+                    "營養補充品",
+                    "生活品質",
+                    "麩醯胺酸（左旋麩醯胺酸）",
+                    "B12",
+                    "維他命C",
+                    "維他命B群",
+                    "魚油"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "深入了解放射治療於癌症中的應用",
+                "author": "Cancerfree",
+                "no": 2441,
+                "date": "2024/10/31 23:06:00",
+                "tags": [
+                    "化療",
+                    "癌症治療",
+                    "癌症",
+                    "繁體中文",
+                    "腫瘤",
+                    "治療方法",
+                    "放射治療",
+                    "電療",
+                    "SEO",
+                    "癌症手術"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "肺癌療程之深度解析",
+                "author": "Cancerfree",
+                "no": 2455,
+                "date": "2024/10/31 01:42:00",
+                "tags": [
+                    "化療",
+                    "治療",
+                    "癌症",
+                    "藥物",
+                    "肺癌",
+                    "靶向療法",
+                    "放療",
+                    "手術"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "深入解析化療藥物對肺癌患者手腳麻木的影響",
+                "author": "Cancerfree",
+                "no": 2456,
+                "date": "2024/10/31 01:41:00",
+                "tags": [
+                    "副作用",
+                    "化療",
+                    "醫療",
+                    "肺癌",
+                    "醫護人員",
+                    "手腳麻",
+                    "生活質量",
+                    "麻木",
+                    "周邊神經"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "深入瞭解肺癌的低劑量電腦斷層篩檢",
+                "author": "Cancerfree",
+                "no": 2457,
+                "date": "2024/10/31 01:37:00",
+                "tags": [
+                    "肺癌",
+                    "早期檢測",
+                    "健康檢查",
+                    "LDCT篩檢",
+                    "低劑量電腦斷層掃描",
+                    "疾病篩檢"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "EGFR突變與肺癌的關係與治療措施",
+                "author": "Cancerfree",
+                "no": 1068,
+                "date": "2024/10/31 01:36:18",
+                "tags": [
+                    "腫瘤",
+                    "肺癌",
+                    "EGFR抑制劑",
+                    "EGFR突變",
+                    "基因突變",
+                    "TKI",
+                    "定向療法"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "深度解析：肺癌基因突變的成因與影響",
+                "author": "Cancerfree",
+                "no": 1067,
+                "date": "2024/10/31 01:35:11",
+                "tags": [
+                    "肺癌",
+                    "EGFR突變",
+                    "環境因素",
+                    "基因突變",
+                    "疾病成因",
+                    "治療影響",
+                    "ALK融合"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "肺癌的症狀",
+                "author": "Cancerfree",
+                "no": 1066,
+                "date": "2024/10/31 01:34:02",
+                "tags": [
+                    "癌症",
+                    "繁體中文",
+                    "肺癌",
+                    "喘",
+                    "背痛",
+                    "咳嗽",
+                    "咳血",
+                    "病症說明",
+                    "健康篇"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "空氣品質對肺癌的影響",
+                "author": "Cancerfree",
+                "no": 1065,
+                "date": "2024/10/31 01:32:56",
+                "tags": [
+                    "癌症",
+                    "繁體中文",
+                    "肺癌",
+                    "健康",
+                    "空氣汙染",
+                    "煮飯",
+                    "油煙",
+                    "抽菸"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ]
+            },
+            {
+                "titles": "深度解析對抗癌症的社會資源",
+                "author": "Cancerfree",
+                "no": 1028,
+                "date": "2024/10/31 00:26:46",
+                "tags": [
+                    "癌症",
+                    "社會資源",
+                    "cancer",
+                    "病患照護",
+                    "social resources",
+                    "support groups",
+                    "financial aid",
+                    "patient care",
+                    "支持團體",
+                    "財政援助",
+                    "患者之家",
+                    "網路資源"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "深入解析健保給付在癌症治療中的角色",
+                "author": "Cancerfree",
+                "no": 1027,
+                "date": "2024/10/31 00:25:34",
+                "tags": [
+                    "癌症治療",
+                    "癌症",
+                    "疾病管理",
+                    "健保給付",
+                    "公共衛生",
+                    "醫療政策"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "細胞治療對於癌症的介紹",
+                "author": "Cancerfree",
+                "no": 2462,
+                "date": "2024/10/31 00:22:00",
+                "tags": [
+                    "癌症",
+                    "疾病",
+                    "細胞治療",
+                    "無創治療",
+                    "醫學技術",
+                    "免疫治療"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "深入瞭解標靶治療在癌症中的應用",
+                "author": "Cancerfree",
+                "no": 2463,
+                "date": "2024/10/31 00:19:00",
+                "tags": [
+                    "化療",
+                    "癌症",
+                    "肺癌",
+                    "乳腺癌",
+                    "標靶治療",
+                    "結腸癌",
+                    "赫赛汀",
+                    "利妥昔單抗",
+                    "基因檢測",
+                    "個體化治療",
+                    "藥物臨床試驗"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "深入了解化療藥物副作用及其對癌症的影響",
+                "author": "Cancerfree",
+                "no": 1023,
+                "date": "2024/10/31 00:15:12",
+                "tags": [
+                    "副作用",
+                    "藥物副作用",
+                    "化療",
+                    "化療藥物",
+                    "癌症治療",
+                    "癌症",
+                    "病患照護"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "關於化學治療的詳細介紹",
+                "author": "Cancerfree",
+                "no": 1022,
+                "date": "2024/10/31 00:13:47",
+                "tags": [
+                    "副作用",
+                    "癌症",
+                    "化學治療",
+                    "腫瘤",
+                    "抗癌藥",
+                    "醫護人員",
+                    "症狀",
+                    "生存品質"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "深度解析：關於癌症和平均壽命",
+                "author": "Cancerfree",
+                "no": 1021,
+                "date": "2024/10/31 00:11:46",
+                "tags": [
+                    "醫學",
+                    "治療",
+                    "癌症",
+                    "肺癌",
+                    "健康",
+                    "免疫療法",
+                    "胰腺癌",
+                    "皮膚癌",
+                    "疾病",
+                    "平均壽命",
+                    "生物學"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "關於癌症的存活率與生存率詳細介紹",
+                "author": "Cancerfree",
+                "no": 1020,
+                "date": "2024/10/31 00:10:22",
+                "tags": [
+                    "癌症",
+                    "治療效果",
+                    "存活率",
+                    "生存率",
+                    "特定病患",
+                    "醫生建議",
+                    "健康情況",
+                    "癌症階段"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "癌症診斷的利器：電腦斷層簡介",
+                "author": "Cancerfree",
+                "no": 1019,
+                "date": "2024/10/31 00:08:48",
+                "tags": [
+                    "癌症",
+                    "電腦斷層",
+                    "早期診斷",
+                    "CT掃描",
+                    "輻射",
+                    "醫療影像",
+                    "疾病診斷",
+                    "三維斷層",
+                    "醫療設備"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "瞭解復發: 癌症再生的關鍵",
+                "author": "Cancerfree",
+                "no": 1018,
+                "date": "2024/10/31 00:07:24",
+                "tags": [
+                    "化療",
+                    "治療",
+                    "癌症",
+                    "免疫療法",
+                    "復發",
+                    "疾病再生",
+                    "放射線治療"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "對於癌症患者，飲食怎麼吃以及飲食禁忌的講解",
+                "author": "Cancerfree",
+                "no": 1017,
+                "date": "2024/10/31 00:05:35",
+                "tags": [
+                    "癌症",
+                    "繁體中文",
+                    "飲食禁忌",
+                    "cancer",
+                    "飲食",
+                    "營養",
+                    "飲食指南",
+                    "生活方式"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "深度探討新療法治療癌症的效果",
+                "author": "Cancerfree",
+                "no": 1016,
+                "date": "2024/10/31 00:02:56",
+                "tags": [
+                    "癌症治療",
+                    "癌症",
+                    "治療方法",
+                    "新治療",
+                    "醫藥新知"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "深入解析: 癌症的成因和原因與藥物",
+                "author": "Cancerfree",
+                "no": 1015,
+                "date": "2024/10/31 00:01:48",
+                "tags": [
+                    "治療",
+                    "癌症",
+                    "癌症治療藥物",
+                    "成因",
+                    "原因",
+                    "環境因素",
+                    "預防",
+                    "繁體中文藥物",
+                    "生活習慣",
+                    "遺傳因素",
+                    "細胞異常",
+                    "細胞損傷"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "對症藥物與癌症的詳細介紹",
+                "author": "Cancerfree",
+                "no": 1014,
+                "date": "2024/10/30 23:59:23",
+                "tags": [
+                    "癌症",
+                    "疾病治療",
+                    "症狀藥物",
+                    "健康教育",
+                    "醫學知識"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            },
+            {
+                "titles": "癌症症狀的詳細介紹",
+                "author": "Cancerfree",
+                "no": 1013,
+                "date": "2024/10/30 23:57:25",
+                "tags": [
+                    "醫學",
+                    "治療",
+                    "癌症",
+                    "腫瘤",
+                    "健康",
+                    "疲勞",
+                    "肌肉疼痛",
+                    "症狀",
+                    "體重減輕",
+                    "早期檢測",
+                    "呼吸困難"
+                ],
+                "website": [
+                    "Gastric Cancer",
+                    "Liver Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Prostate Cancer",
+                    "Breast Cancer",
+                    "Esophageal Cancer",
+                    "Colorectal Cancer",
+                    "Brain tumor",
+                    "Oral Cancer"
+                ]
+            }
+        ]
+    },
+    "ad1": {
+        "image": "./images/官網little star配圖.png",
+        "content": "Little Star",
+        "link": "https://littlestar.love/"
+    },
+    "ad2": {
+        "image": "./images/官網 替身醫療 配圖.png",
+        "content": "替身醫療",
+        "link": "https://info.cancerfree.io/"
+    },
+    "ad3": {
+        "image": "./images/癌症論壇主視覺1200x100-1.png",
+        "content": "癌症新曙光",
+        "link": "https://www.accupass.com/event/2409190641091118413560"
+    }
+}

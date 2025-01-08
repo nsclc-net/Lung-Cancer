@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="headtitle">癌症資訊大補貼</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <!--div id="ad3">
+            <a href="https://www.cancerfree.io/zh-tw/index" id="adLink3" target="_blank">
+                <img src="./images/ad3.png" id="adImg3" alt="Sticky Image">
+            </a>
+        </div-->
+        <!--div id="ad3Container" hidden>
+        </div-->
+        <div class="functions">
+            <a href="#" id="homePage">首頁</a>
+            <a href="#" id="backToTop">回到頂部</a>
+            <a href="intro.html">簡介</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1 id="title">歡迎來到癌症資訊大補貼</h1>
+    </header>
+
+
+    <div class="container">
+        <div id="stickyImageContainer">
+            <!--div id="stickyImage">
+                <a href="https://www.cancerfree.io/zh-tw/index" id="adLink" target="_blank">
+                    <img src="./ad_init.png" id="adImg" alt="Sticky Image">
+                </a>
+            </div>
+            <div id="stickyImage2">
+                <a href="https://www.cancerfree.io/zh-tw/index" id="adLink2" target="_blank">
+                    <img src="./ad_init.png" id="adImg2" alt="Sticky Image">
+                </a>
+            </div-->
+        </div>
+        <main>
+            <div id="ad3Container" hidden>
+            </div>
+            <div id="filterStatus"></div>
+            <div id="articles"></div>
+            <div id="pagination">
+                <button id="prevPage">上一頁</button>
+                <span id="currentPage"></span>
+                <button id="nextPage">下一頁</button>
+            </div>
+        </main>
+
+        <aside id="sidebar">
+        <div id="sidebarContent">
+            <section>
+                <h3>日期歸檔</h3>
+                <ul id="dateArchive"></ul>
+            </section>
+            <section>
+                <h3>標籤</h3>
+                <ul id="tagList"></ul>
+            </section>
+        </div>
+            <div id="stickyImageContainer2" hidden>
+                <!--div id="stickyImage">
+                    <a href="https://www.cancerfree.io/zh-tw/index" id="adLink" target="_blank">
+                        <img src="./ad_init.png" id="adImg" alt="Sticky Image">
+                    </a>
+                </div>
+                <div id="stickyImage2">
+                    <a href="https://www.cancerfree.io/zh-tw/index" id="adLink2" target="_blank">
+                        <img src="./ad_init.png" id="adImg2" alt="Sticky Image">
+                    </a>
+                </div-->
+            </div>
+    </aside>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+</body>
+</html>

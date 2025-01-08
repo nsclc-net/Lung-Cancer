@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="headtitle">癌症資訊大補貼</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--nav>
+    <a href="index.html" id="homePage">首頁</a>
+    <a href="#" id="backToTop">回到頂部</a>
+    </nav-->
+
+    <nav>
+        <div id="ad3Container">
+            <!--div id="ad3">
+            <a href="https://www.cancerfree.io/zh-tw/index" id="adLink3" target="_blank">
+                <img src="./images/ad3.png" id="adImg3" alt="Sticky Image">
+            </a>
+        </div-->
+        </div>
+        <div class="functions">
+            <a href="./index.html" id="homePage">首頁</a>
+            <a href="#" id="backToTop">回到頂部</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1 id="title">歡迎來到癌症資訊大補貼</h1>
+    </header>
+
+    <div class="container">
+        <main id="main">
+            <div id="introTitle">
+                <h2>簡介</h2>
+            </div>
+            <div id="introContent">
+                <p id="intro">這是一個部落格網站。</p>
+            </div>
+        </main>
+
+        <aside id="sidebar">
+        <div id="stickyImageContainer">
+            <!--div id="stickyImage">
+                <a href="https://www.cancerfree.io/zh-tw/index" id="adLink" target="_blank">
+                    <img src="./ad_init.jpg" id="adImg" alt="Sticky Image">
+                </a>
+            </div-->
+        </div>
+    </aside>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const tag = urlParams.get('tag');
+
+        if (tag) {
+            currentFilterType = 'tag';
+            currentFilterValue = tag;
+        }
+
+        // 從 JSON 文件加載文章元數據
+        fetch('content.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('title').textContent = data.hero.title;
+                document.getElementById('headtitle').textContent = data.siteTitle;
+                createStickyImage(data.ad1, 'stickyImage');
+                createStickyImage(data.ad2, 'stickyImage2');
+                createAd3(data.ad3);
+                if(data.introduction.content !== ""){
+                    document.getElementById("intro").textContent = data.introduction.content
+                }
+                if(data.introduction.image !== ""){
+                    const introContainer = document.getElementById('introContent');
+                    const introImage = document.createElement('img');
+                    introImage.alt = "introImage";
+                    introImage.src = data.introduction.image;
+                    introContainer.appendChild(introImage);
+                } else {
+                    document.getElementById('introContent').style.paddingBottom = "1rem";
+                }
+
+                document.documentElement.style.setProperty('--primary-color', data.color1);
+                document.documentElement.style.setProperty('--secondary-color', data.color2);
+                document.documentElement.style.setProperty('--text-color', data.color3);
+                document.documentElement.style.setProperty('--background-color', data.color4);
+                document.documentElement.style.setProperty('--accent-color', data.color5);
+            })
+            .catch(error => console.error('Error loading articles:', error));
+    });
+
+        function createStickyImage(adData, id) {
+            if (adData.image && adData.image !== "") {
+                const stickyImageContainer = document.getElementById('stickyImageContainer');
+                const stickyImageDiv = document.createElement('div');
+                stickyImageDiv.id = id;
+                stickyImageDiv.innerHTML = `
+            <a href="${adData.link}" id="${id}Link" target="_blank">
+                <img src="${adData.image}" id="${id}Img" alt="Sticky Image">
+            </a>
+        `;
+                stickyImageContainer.appendChild(stickyImageDiv);
+            }
+        }
+
+        function createAd3(adData) {
+            if (adData.image && adData.image !== "") {
+                const ad3Container = document.getElementById('ad3Container');
+                ad3Container.innerHTML = `
+            <div id="ad3">
+                <a href="${adData.link}" id="adLink3" target="_blank">
+                    <img src="${adData.image}" id="adImg3" alt="Sticky Image">
+                </a>
+            </div>
+        `;
+            }
+        }
+    </script>
+</body>
+</html>
