@@ -154,6 +154,23 @@ function addRelatedWebsites(currentSite) {
 }
 
 function createTagCloud(id, div) {
+    const paragraphs = document.body.querySelectorAll('p')
+    fetch('https://53f9-104-199-172-31.ngrok-free.appd/text_cloud', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ content: paragraphs })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .catch(error => {
+        console.error('Fetch error:', error)
+    })
     const tagCloudContainer = document.createElement('div');
     tagCloudContainer.id = id;
     tagCloudContainer.className = 'bg-orange-300 p-4 rounded-lg shadow-md';
@@ -394,7 +411,7 @@ document.addEventListener('click', (event) =>{
         event.preventDefault();
         console.log('detect_click\n');
         console.log(anchor.href);
-        fetch('https://065c-104-199-172-31.ngrok-free.app/track_url', {
+        fetch('https://53f9-104-199-172-31.ngrok-free.app/track_url', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
