@@ -155,9 +155,9 @@ function addRelatedWebsites(currentSite) {
 
 function createTagCloud(id, div) {
     const paragraphs = Array.from(document.body.querySelectorAll('p'))
-                        .map(p => p.textContent.trim()) // Get text content of each paragraph
-                        .join(' '); // Join all paragraphs into one string
-    var tags = {}
+                            .map(p => p.textContent.trim()) // Get text content of each paragraph
+                            .join(' '); // Join all paragraphs into one string
+
     fetch('https://383a-104-199-172-31.ngrok-free.app/text_cloud', {
         method: 'POST',
         headers: {
@@ -173,11 +173,14 @@ function createTagCloud(id, div) {
     })
     .then(data => {
         console.log('Success:', data);
-        tags = data;
+        drawTagCloud(id, div, data.tags);  // Pass extracted tags to drawing function
     })
     .catch(error => {
         console.error('Fetch error:', error);
     });
+}
+
+function drawTagCloud(id, div, tags) {
     const tagCloudContainer = document.createElement('div');
     tagCloudContainer.id = id;
     tagCloudContainer.className = 'bg-orange-300 p-4 rounded-lg shadow-md';
@@ -198,20 +201,12 @@ function createTagCloud(id, div) {
 
     // 計算標籤頻率
     const tagCounts = {};
-    for (const i = 0; i < Object.keys(tags).length; i++){
-        console.log(tagCounts[tags[i]])
-        tagCounts[tags[i]] = 20 - i
-    }
-    // articles.forEach(article => {
-    //     article.tags.forEach(tag => {
-    //         tagCounts[tag] = (tagCounts[tag] || 0) + 1;
-    //     });
-    // });
-
+    tags.forEach((tag, i) => {
+        tagCounts[tag] = 20 - i;
+    });
 
     // 準備數據
-    const words = Object.keys(tags)
-        .map(tag => ({
+    const words = Object.keys(tagCounts).map(tag => ({
         text: tag,
         size: Math.max(12, Math.min(40, 12 + tagCounts[tag] * 3))
     }));
@@ -243,7 +238,6 @@ function createTagCloud(id, div) {
             .style("font-weight", "bold")
             .style("cursor", "pointer")
             .style("fill", (d, i) => color(i))
-            .style("cursor", "pointer")
             .attr("text-anchor", "middle")
             .attr("transform", d => `translate(${d.x},${d.y})`)
             .text(d => d.text)
@@ -252,37 +246,24 @@ function createTagCloud(id, div) {
         function resizeCloud() {
             const containerWidth = tagCloudContainer.clientWidth;
             const containerHeight = containerWidth * (baseHeight / baseWidth);
-
-            // 計算縮放因子，但限制最小值和最大值
-            //const scaleFactor = Math.min(Math.max(containerWidth / baseWidth, 0.5), 1.5);
             const scaleFactor = containerWidth / baseWidth;
 
-            // 更新 SVG 大小
             tagCloudSvg.style.width = `${containerWidth}px`;
             tagCloudSvg.style.height = `${containerHeight}px`;
-            tagCloudSvg.setAttribute("viewBox", `0 0 ${containerWidth} ${containerHeight}`)
+            tagCloudSvg.setAttribute("viewBox", `0 0 ${containerWidth} ${containerHeight}`);
 
-            // 更新字體大小和位置，設置最小和最大字體大小
-            /*alert(containerWidth)
-            alert(scaleFactor)
-            alert(containerHeight)
-            alert(baseHeight)*/
-            //cloud.style("font-size", d => `${Math.min(Math.max(d.size * scaleFactor, 10), 40)}px`)
             cloud.style("font-size", d => `${d.size * scaleFactor}px`)
                 .attr("transform", d => `translate(${d.x * scaleFactor},${d.y * scaleFactor})`);
 
-            // 更新整個雲的位置，確保居中
             d3.select(tagCloudSvg.querySelector('g'))
                 .attr("transform", `translate(${containerWidth/2},${containerHeight/2})`);
         }
 
-        // 添加視窗大小改變事件監聽器
         window.addEventListener('resize', resizeCloud);
-
-        // 初始調用一次以設置正確的大小
         resizeCloud();
     }
 }
+
 
 
 function createStickyImage(adData, id, div) {
