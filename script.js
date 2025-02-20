@@ -397,7 +397,7 @@ async function translatePage() {
 
     // Select text-containing elements but preserve inline formatting
     const elements = document.body.querySelectorAll("h1, h2, h3, p, a, span, div:not([class*='container'])");
-    
+    console.log(elements);
     const textNodes = []; // Store text nodes to update later
     const textContents = []; // Store original texts for batch translation
 
