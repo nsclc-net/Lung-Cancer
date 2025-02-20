@@ -391,10 +391,12 @@ document.addEventListener('click', (event) =>{
 async function translatePage() {
     const userLang = navigator.language || navigator.userLanguage; // Detect browser language
     const targetLang = 'us'; // Get language code
+    setTimeout(0.5)
     const elements = document.querySelectorAll("h1, h2, h3, p, a"); // Select elements to translate
     console.log("elements: ", elements)
     console.log(userLang)
     console.log(targetLang)
+    
     for (let el of elements) {
         console.log(el)
         const originalText = el.textContent.trim(); // Trim to remove unnecessary spaces
