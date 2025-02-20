@@ -157,7 +157,7 @@ function createTagCloud(id, div) {
     const paragraphs = Array.from(document.body.querySelectorAll('p'))
                         .map(p => p.textContent.trim()) // Get text content of each paragraph
                         .join(' '); // Join all paragraphs into one string
-    const tags = {}
+    var tags = {}
     fetch('https://383a-104-199-172-31.ngrok-free.app/text_cloud', {
         method: 'POST',
         headers: {
