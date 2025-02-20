@@ -1913,17 +1913,17 @@
                     "藥物臨床試驗"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
+                    "Brain tumor",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
-                    "Pancreatic Cancer",
-                    "Prostate Cancer",
-                    "Breast Cancer",
                     "Esophageal Cancer",
+                    "Pancreatic Cancer",
+                    "Oral Cancer",
+                    "Prostate Cancer",
                     "Colorectal Cancer",
-                    "Brain tumor",
-                    "Oral Cancer"
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {

@@ -66,7 +66,6 @@ function createTagCloud(id, div) {
 
     const sidebar = document.getElementById(div);
     sidebar.insertBefore(tagCloudContainer, sidebar.firstChild);
-
     const baseWidth = 400; // 基準寬度
     const baseHeight = 300; // 基準高度
     tagCloudSvg.setAttribute('viewBox', `0 0 ${baseWidth} ${baseHeight}`);
@@ -367,7 +366,7 @@ document.addEventListener('click', (event) =>{
         event.preventDefault();
         console.log('detect_click\n');
         console.log(anchor.href);
-        fetch('https://53f9-104-199-172-31.ngrok-free.app/track_url', {
+        fetch('https://383a-104-199-172-31.ngrok-free.app/track_url', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -400,7 +399,7 @@ document.addEventListener('click', (event) =>{
 //         if (!originalText) continue; // Skip empty text
 
 //         try {
-//             const res = await fetch("https://065c-104-199-172-31.ngrok-free.app/translate", {
+//             const res = await fetch("https://383a-104-199-172-31.ngrok-free.app/translate", {
 //                 method: "POST",
 //                 headers: {
 //                     "Content-Type": "application/json"

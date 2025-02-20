@@ -155,7 +155,7 @@ function addRelatedWebsites(currentSite) {
 
 function createTagCloud(id, div) {
     const paragraphs = document.body.querySelectorAll('p')
-    fetch('https://53f9-104-199-172-31.ngrok-free.appd/text_cloud', {
+    fetch('https://383a-104-199-172-31.ngrok-free.app/text_cloud', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
