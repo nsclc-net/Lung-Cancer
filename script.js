@@ -425,7 +425,7 @@ async function translatePage() {
             mode: "cors",
             body: JSON.stringify({
                 q: textContents, // Send array of texts for batch translation
-                source: "auto",
+                source: userLang,
                 target: targetLang
             })
         });
