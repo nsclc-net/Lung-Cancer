@@ -157,6 +157,7 @@ function createTagCloud(id, div) {
     const paragraphs = Array.from(document.body.querySelectorAll('p'))
                         .map(p => p.textContent.trim()) // Get text content of each paragraph
                         .join(' '); // Join all paragraphs into one string
+    const tags = {}
     fetch('https://383a-104-199-172-31.ngrok-free.app/text_cloud', {
         method: 'POST',
         headers: {
@@ -172,6 +173,7 @@ function createTagCloud(id, div) {
     })
     .then(data => {
         console.log('Success:', data);
+        tags = data;
     })
     .catch(error => {
         console.error('Fetch error:', error);
@@ -196,18 +198,19 @@ function createTagCloud(id, div) {
 
     // 計算標籤頻率
     const tagCounts = {};
-    articles.forEach(article => {
-        article.tags.forEach(tag => {
-            tagCounts[tag] = (tagCounts[tag] || 0) + 1;
-        });
-    });
+    for (const i = 0; i < Object.keys(tags).length; i++){
+        console.log(tagCounts[tags[i]])
+        tagCounts[tags[i]] = 20 - i
+    }
+    // articles.forEach(article => {
+    //     article.tags.forEach(tag => {
+    //         tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+    //     });
+    // });
+
 
     // 準備數據
-    const filter = [/SEO/i, /.*癌症.*/, /.*治療.*/, /.*醫學/, /醫藥/, /.*癌/];
-
-    // 準備數據
-    const words = Object.keys(tagCounts)
-        .filter(tag => !filter.some(pattern => pattern.test(tag)))
+    const words = Object.keys(tags)
         .map(tag => ({
         text: tag,
         size: Math.max(12, Math.min(40, 12 + tagCounts[tag] * 3))
