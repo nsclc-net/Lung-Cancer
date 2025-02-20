@@ -390,7 +390,7 @@ document.addEventListener('click', (event) =>{
 
 async function translatePage() {
     const userLang = navigator.language || navigator.userLanguage; // Detect browser language
-    const targetLang = userLang; // Get language code
+    const targetLang = 'us'; // Get language code
     const elements = document.querySelectorAll('h1, h2, h3, p, a'); // Select elements to translate
     console.log(userLang)
     console.log(targetLang)
@@ -407,7 +407,7 @@ async function translatePage() {
                 mode: "cors", // Explicitly enable CORS
                 body: JSON.stringify({
                     q: originalText,
-                    source: "auto",
+                    source: userLang,
                     target: targetLang
                 })
             });
