@@ -391,44 +391,64 @@ document.addEventListener('click', (event) =>{
 async function translatePage() {
     const userLang = navigator.language || navigator.userLanguage; // Detect browser language
     const targetLang = 'us'; // Get language code
-    setTimeout(1000)
+
+    console.log("User Language:", userLang);
+    console.log("Target Language:", targetLang);
+
+    // Select text-containing elements but preserve inline formatting
     const elements = document.body.querySelectorAll("h1, h2, h3, p, a, span, div:not([class*='container'])");
- // Select elements to translate
-    console.log("elements: ", elements)
-    console.log(userLang)
-    console.log(targetLang)
     
+    const textNodes = []; // Store text nodes to update later
+    const textContents = []; // Store original texts for batch translation
+
+    // Extract text nodes and store their content
     for (let el of elements) {
-        console.log(el)
-        const originalText = el.textContent.trim(); // Trim to remove unnecessary spaces
-        if (!originalText) continue; // Skip empty text
-
-        try {
-            const res = await fetch("https://383a-104-199-172-31.ngrok-free.app/translate", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                mode: "cors", // Explicitly enable CORS
-                body: JSON.stringify({
-                    q: originalText,
-                    source: userLang,
-                    target: targetLang
-                })
-            });
-
-            if (!res.ok) {
-                const errorDetails = await res.text();
-                console.error(`API Error (${res.status}): ${errorDetails}`);
-                continue;
+        [...el.childNodes].forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) { // Only process text, not elements
+                const originalText = node.textContent.trim();
+                if (originalText) {
+                    textNodes.push(node);
+                    textContents.push(originalText);
+                }
             }
+        });
+    }
 
-            const data = await res.json();
-            el.textContent = data.translatedText || originalText; // Update text or keep original
-        } catch (error) {
-            console.error("Translation error:", error);
+    // Check if there is anything to translate
+    if (textContents.length === 0) return;
+
+    try {
+        // Send one request to translate all texts at once
+        const res = await fetch("https://383a-104-199-172-31.ngrok-free.app/translate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            mode: "cors",
+            body: JSON.stringify({
+                q: textContents, // Send array of texts for batch translation
+                source: "auto",
+                target: targetLang
+            })
+        });
+
+        if (!res.ok) {
+            const errorDetails = await res.text();
+            console.error(`API Error (${res.status}): ${errorDetails}`);
+            return;
         }
+
+        const data = await res.json();
+        const translatedTexts = data.translatedTexts || [];
+
+        // Apply translations all at once
+        textNodes.forEach((node, i) => {
+            node.textContent = translatedTexts[i] || textContents[i]; // Use translation or fallback to original
+        });
+
+        console.log("Translation completed successfully!");
+    } catch (error) {
+        console.error("Translation error:", error);
     }
 }
 
+// Run translation after the page has fully loaded
 document.addEventListener("DOMContentLoaded", translatePage);
