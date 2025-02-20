@@ -154,24 +154,28 @@ function addRelatedWebsites(currentSite) {
 }
 
 function createTagCloud(id, div) {
-    const paragraphs = document.body.querySelectorAll('p')
+    const paragraphs = Array.from(document.body.querySelectorAll('p'))
+                        .map(p => p.textContent.trim()) // Get text content of each paragraph
+                        .join(' '); // Join all paragraphs into one string
     fetch('https://383a-104-199-172-31.ngrok-free.app/text_cloud', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ content: paragraphs })
+        body: JSON.stringify({ content: paragraphs })  // Send a single string
     })
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        console.log(response.json())
-        return response.json();
+        return response.json();  // Return JSON response
+    })
+    .then(data => {
+        console.log('Success:', data);
     })
     .catch(error => {
-        console.error('Fetch error:', error)
-    })
+        console.error('Fetch error:', error);
+    });
     const tagCloudContainer = document.createElement('div');
     tagCloudContainer.id = id;
     tagCloudContainer.className = 'bg-orange-300 p-4 rounded-lg shadow-md';
