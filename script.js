@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('content.json')
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            // console.log(data)
             articles = data.documents.items || [];
             document.getElementById('title').textContent = data.hero.title;
             document.getElementById('headtitle').textContent = data.siteTitle;
@@ -391,7 +391,7 @@ document.addEventListener('click', (event) =>{
 async function translatePage() {
     const userLang = navigator.language || navigator.userLanguage; // Detect browser language
     const targetLang = 'us'; // Get language code
-    const elements = document.querySelectorAll('h1, h2, h3, p, a'); // Select elements to translate
+    const elements = document.querySelectorAll('h1', 'h2', 'h3', 'p', 'a'); // Select elements to translate
     console.log("elements: ", elements)
     console.log(userLang)
     console.log(targetLang)
