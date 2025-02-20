@@ -391,8 +391,9 @@ document.addEventListener('click', (event) =>{
 async function translatePage() {
     const userLang = navigator.language || navigator.userLanguage; // Detect browser language
     const targetLang = 'us'; // Get language code
-    setTimeout(0.5)
-    const elements = document.querySelectorAll("h1, h2, h3, p, a"); // Select elements to translate
+    setTimeout(1000)
+    const elements = document.body.querySelectorAll("h1, h2, h3, p, a, span, div:not([class*='container'])");
+ // Select elements to translate
     console.log("elements: ", elements)
     console.log(userLang)
     console.log(targetLang)
