@@ -403,6 +403,7 @@ async function translatePage() {
 
     // Extract text nodes and store their content
     for (let el of elements) {
+        console.log(el);
         [...el.childNodes].forEach(node => {
             if (node.nodeType === Node.TEXT_NODE) { // Only process text, not elements
                 const originalText = node.textContent.trim();
@@ -416,7 +417,7 @@ async function translatePage() {
 
     // Check if there is anything to translate
     if (textContents.length === 0) return;
-
+    console.log("textContents: ", textContents)
     try {
         // Send one request to translate all texts at once
         const res = await fetch("https://383a-104-199-172-31.ngrok-free.app/translate", {
