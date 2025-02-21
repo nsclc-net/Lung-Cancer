@@ -434,8 +434,20 @@ async function translatePage() {
 
         const data = await res.json();
         console.log(data);
-        const translatedTexts = data.translatedTexts || [];
-        console.log("Translated Texts:", translatedTexts);
+        let translatedTexts;
+        try {
+            translatedTexts = JSON.parse(data.translatedText); // Convert string to array
+        } catch (parseError) {
+            console.error("Error parsing translatedText:", parseError);
+            return;
+        }
+
+        if (!Array.isArray(translatedTexts) || translatedTexts.length === 0) {
+            console.error("Unexpected API response format. Check API response:", data);
+            return;
+        }
+
+        console.log("Parsed Translated Texts:", translatedTexts);
 
         // Apply translations
         textNodes.forEach((node, i) => {
