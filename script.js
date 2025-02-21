@@ -390,36 +390,31 @@ document.addEventListener('click', (event) =>{
 
 async function translatePage() {
     const userLang = navigator.language || navigator.userLanguage; // Detect browser language
-    const targetLang = 'us'; // Get language code
+    const targetLang = 'us'; // Target language code
 
     console.log("User Language:", userLang);
     console.log("Target Language:", targetLang);
 
-    // Select text-containing elements but preserve inline formatting
-    const elements = document.body.querySelectorAll("h1, h2, h3, p, a, span");
-    console.log(elements);
-    const textNodes = []; // Store text nodes to update later
-    const textContents = []; // Store original texts for batch translation
+    // Create a TreeWalker to extract text nodes from all selected elements
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
 
-    // Extract text nodes and store their content
-    for (let el of elements) {
-        console.log(el);
-        [...el.childNodes].forEach(node => {
-            if (node.nodeType === Node.TEXT_NODE) { // Only process text, not elements
-                const originalText = node.textContent.trim();
-                if (originalText) {
-                    textNodes.push(node);
-                    textContents.push(originalText);
-                }
-            }
-        });
+    const textNodes = [];
+    const textContents = [];
+
+    let node;
+    while ((node = walker.nextNode())) {
+        const originalText = node.textContent.trim();
+        if (originalText) {
+            textNodes.push(node);
+            textContents.push(originalText);
+        }
     }
 
     // Check if there is anything to translate
     if (textContents.length === 0) return;
-    console.log("textContents: ", textContents)
+    console.log("Text to translate:", textContents);
+
     try {
-        // Send one request to translate all texts at once
         const res = await fetch("https://383a-104-199-172-31.ngrok-free.app/translate", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -438,12 +433,11 @@ async function translatePage() {
         }
 
         const data = await res.json();
-        console.log(data);
         const translatedTexts = data.translatedTexts || [];
-        console.log("translatedTexts: ", translatedTexts);
-        // Apply translations all at once
+        console.log("Translated Texts:", translatedTexts);
+
+        // Apply translations
         textNodes.forEach((node, i) => {
-            console.log(node)
             node.textContent = translatedTexts[i] || textContents[i]; // Use translation or fallback to original
         });
 
@@ -455,3 +449,4 @@ async function translatePage() {
 
 // Run translation after the page has fully loaded
 document.addEventListener("DOMContentLoaded", translatePage);
+
