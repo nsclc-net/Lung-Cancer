@@ -433,6 +433,8 @@ async function translatePage() {
         }
 
         const data = await res.json();
+        console.log(data[0]);
+        console.log(data.translatedTexts);
         const translatedTexts = data.translatedTexts || [];
         console.log("Translated Texts:", translatedTexts);
 
