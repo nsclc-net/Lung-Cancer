@@ -439,9 +439,10 @@ async function translatePage() {
 
         const data = await res.json();
         const translatedTexts = data.translatedTexts || [];
-
+        console.log("translatedTexts: ", translatedTexts);
         // Apply translations all at once
         textNodes.forEach((node, i) => {
+            console.log(node)
             node.textContent = translatedTexts[i] || textContents[i]; // Use translation or fallback to original
         });
 
