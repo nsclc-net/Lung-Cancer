@@ -436,7 +436,8 @@ async function translatePage() {
         console.log(data);
         let translatedTexts;
         try {
-            translatedTexts = JSON.parse(data.translatedText); // Convert string to array
+            const formattedString = data.translatedText.replace(/'/g, '"'); // Replace single quotes with double quotes
+            translatedTexts = JSON.parse(formattedString); // Convert string to array
         } catch (parseError) {
             console.error("Error parsing translatedText:", parseError);
             return;
