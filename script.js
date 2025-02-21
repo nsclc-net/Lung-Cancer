@@ -438,6 +438,7 @@ async function translatePage() {
         }
 
         const data = await res.json();
+        console.log(data);
         const translatedTexts = data.translatedTexts || [];
         console.log("translatedTexts: ", translatedTexts);
         // Apply translations all at once
