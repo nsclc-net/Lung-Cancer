@@ -473,16 +473,12 @@ async function translatePage() {
         textNodes.forEach((node, i) => {
             if (node.nodeType === Node.TEXT_NODE) {
                 node.textContent = translatedTexts[i] || textContents[i];
-                if (node.parentNode) {
-                    node.parentNode.setAttribute("data-translated", "true");
-                }
             } else if (node instanceof HTMLElement) {
                 if (node.placeholder) {
                     node.placeholder = translatedTexts[i] || textContents[i];
                 } else {
                     node.innerText = translatedTexts[i] || textContents[i];
                 }
-                node.setAttribute("data-translated", "true");
             }
         });
 
