@@ -392,122 +392,124 @@ async function translatePage() {
     const userLang = navigator.language || navigator.userLanguage;
     const targetLang = 'us';
 
-    // Helper function to get a content hash for detecting changes
-    const getContentHash = () => {
-        const content = document.body.innerText;
-        let hash = 0;
-        for (let i = 0; i < content.length; i++) {
-            const char = content.charCodeAt(i);
-            hash = ((hash << 5) - hash) + char;
-            hash = hash & hash;
-        }
-        return hash;
-    };
-
-    // Function to check if content is stable
-    const isContentStable = async () => {
-        const initialHash = getContentHash();
-        await new Promise(resolve => setTimeout(resolve, 500)); // Wait 500ms
-        const finalHash = getContentHash();
-        return initialHash === finalHash;
-    };
-
-    // Function to safely get class names as a string
-    const getClassNames = (element) => {
-        if (element.className && typeof element.className === 'string') {
-            return element.className;
-        }
-        if (element.className && element.className.baseVal) {
-            return element.className.baseVal;
-        }
-        return element.getAttribute('class') || '';
-    };
-
-    // Function to check if an element is likely to be dynamically updated
-    const isDynamicContent = (node) => {
-        const parent = node instanceof Text ? node.parentElement : node;
-        if (!parent) return false;
-
-        // Check for common dynamic content indicators
-        const hasDataAttributes = Array.from(parent.attributes || []).some(attr => 
-            attr.name.startsWith('data-') && 
-            !attr.name.includes('translated')
-        );
-        
-        const classNames = getClassNames(parent).toLowerCase();
-        const hasLoadingClass = classNames.includes('loading');
-        const isPlaceholder = parent.getAttribute('aria-busy') === 'true' ||
-                            classNames.includes('placeholder');
-        
-        return hasDataAttributes || hasLoadingClass || isPlaceholder;
-    };
-
-    // Helper function to process text
+    // Helper function to process text before translation
     const processText = (text) => {
-        if (typeof text !== 'string') return '';
         return text.trim()
             .replace(/\s+/g, ' ')
             .replace(/[\u2018\u2019]/g, "'")
             .replace(/[\u201C\u201D]/g, '"');
     };
 
-    // Wait for content to stabilize
-    const maxAttempts = 5;
-    let attempts = 0;
-    
-    while (attempts < maxAttempts) {
-        const stable = await isContentStable();
-        if (stable) break;
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        attempts++;
-    }
-
-    // Collect text nodes
-    const textMapping = new Map();
-    
-    try {
-        // Use TreeWalker for text nodes
-        const walker = document.createTreeWalker(
-            document.body,
-            NodeFilter.SHOW_TEXT,
-            {
-                acceptNode: (node) => {
-                    if (!node || !node.parentNode) return NodeFilter.FILTER_REJECT;
-                    
-                    const parent = node.parentNode;
-                    if (parent.closest('[data-translated="true"]') ||
-                        parent.tagName === 'SCRIPT' ||
-                        parent.tagName === 'STYLE' ||
-                        isDynamicContent(node)) {
-                        return NodeFilter.FILTER_REJECT;
-                    }
-                    return NodeFilter.FILTER_ACCEPT;
-                }
-            }
-        );
-
-        let node;
-        while ((node = walker.nextNode())) {
-            const text = processText(node.textContent);
-            if (text) {
-                textMapping.set(node, text);
-            }
+    // Helper function to convert comma-separated text to JSON array
+    const convertToJsonArray = (text) => {
+        // If it's already a JSON array, return as is
+        if (text.trim().startsWith('[') && text.trim().endsWith(']')) {
+            return text;
         }
 
-        // Collect from specific elements
-        document.querySelectorAll("h1, h2, h3, p, button, input[type='text'], textarea").forEach(el => {
-            if (!el.closest('[data-translated="true"]') && !isDynamicContent(el)) {
-                const text = processText(el.innerText || el.placeholder || '');
-                if (text) {
-                    textMapping.set(el, text);
+        // Split the text by visible delimiters while preserving date and tag sections
+        const items = [];
+        let currentItem = '';
+        let inDateSection = false;
+        let inTagsSection = false;
+
+        const segments = text.split(/,\s*(?=(?:[^|]*\|[^|]*\|)*[^|]*$)/);
+        
+        segments.forEach(segment => {
+            // Check if this segment contains a date
+            if (segment.match(/date:\s*\d{4}\/\d{2}\/\d{2}/i)) {
+                if (currentItem) {
+                    items.push(currentItem.trim());
+                }
+                currentItem = segment;
+                inDateSection = true;
+            }
+            // Check if this segment contains tags
+            else if (segment.match(/\|\s*tags:/i)) {
+                currentItem += ',' + segment;
+                inTagsSection = true;
+            }
+            // Regular segment
+            else if (!inDateSection && !inTagsSection) {
+                if (currentItem) {
+                    items.push(currentItem.trim());
+                }
+                currentItem = segment;
+            }
+            // Part of date or tags section
+            else {
+                currentItem += ',' + segment;
+                if (segment.includes('cancer drug introduction')) {
+                    inDateSection = false;
+                    inTagsSection = false;
+                    items.push(currentItem.trim());
+                    currentItem = '';
                 }
             }
         });
 
-        if (textMapping.size === 0) return;
+        // Add the last item if there is one
+        if (currentItem) {
+            items.push(currentItem.trim());
+        }
 
-        const textContents = Array.from(textMapping.values());
-        
+        // Clean up each item and wrap in quotes
+        const cleanedItems = items.map(item => {
+            const cleaned = item
+                .trim()
+                .replace(/^['"]|['"]$/g, '') // Remove existing quotes
+                .replace(/"/g, '\\"'); // Escape any internal double quotes
+            return `"${cleaned}"`;
+        });
+
+        // Construct the final JSON array
+        return `[${cleanedItems.join(',')}]`;
+    };
+
+    // Collect text nodes
+    const textMapping = new Map();
+    
+    // Use TreeWalker for text nodes
+    const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+            acceptNode: (node) => {
+                const parent = node.parentNode;
+                if (!parent || 
+                    parent.closest('[data-translated="true"]') ||
+                    parent.tagName === 'SCRIPT' ||
+                    parent.tagName === 'STYLE') {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        }
+    );
+
+    let node;
+    while ((node = walker.nextNode())) {
+        const text = processText(node.textContent);
+        if (text) {
+            textMapping.set(node, text);
+        }
+    }
+
+    // Collect from specific elements
+    document.querySelectorAll("h1, h2, h3, p, button, input[type='text'], textarea").forEach(el => {
+        if (!el.closest('[data-translated="true"]')) {
+            const text = processText(el.innerText || el.placeholder || '');
+            if (text) {
+                textMapping.set(el, text);
+            }
+        }
+    });
+
+    if (textMapping.size === 0) return;
+
+    const textContents = Array.from(textMapping.values());
+    
+    try {
         const res = await fetch("https://383a-104-199-172-31.ngrok-free.app/translate", {
             method: "POST",
             headers: { 
@@ -532,19 +534,11 @@ async function translatePage() {
             throw new Error('Invalid API response format');
         }
 
-        // Parse the translation response
-        let translatedTexts;
-        try {
-            translatedTexts = JSON.parse(data.translatedText);
-        } catch (e) {
-            // If parsing fails, try to clean the response
-            const cleaned = data.translatedText
-                .replace(/^\[?|\]?$/g, '')
-                .split(',')
-                .map(item => `"${item.trim().replace(/^["']|["']$/g, '').replace(/"/g, '\\"')}"`)
-                .join(',');
-            translatedTexts = JSON.parse(`[${cleaned}]`);
-        }
+        // Convert response to proper JSON array
+        const jsonArrayString = convertToJsonArray(data.translatedText);
+        console.log("Converted to JSON array:", jsonArrayString);
+
+        const translatedTexts = JSON.parse(jsonArrayString);
 
         if (!Array.isArray(translatedTexts)) {
             throw new Error('Translation result is not an array');
@@ -553,9 +547,6 @@ async function translatePage() {
         // Apply translations
         let i = 0;
         for (const [node, originalText] of textMapping.entries()) {
-            // Skip if the node has been dynamically updated
-            if (isDynamicContent(node)) continue;
-
             const translation = translatedTexts[i++] || originalText;
             
             try {
@@ -584,46 +575,26 @@ async function translatePage() {
     }
 }
 
-// Improved debounce with content stability check
+// Enhanced debounce implementation
 const debounce = (fn, delay) => {
     let timeoutId;
-    let lastRun = 0;
-    const minInterval = 2000; // Minimum time between runs
-
     return (...args) => {
         clearTimeout(timeoutId);
-        
-        const now = Date.now();
-        if (now - lastRun < minInterval) {
-            timeoutId = setTimeout(() => {
-                lastRun = Date.now();
-                fn(...args);
-            }, delay);
-        } else {
-            lastRun = now;
-            fn(...args);
-        }
+        timeoutId = setTimeout(() => fn(...args), delay);
     };
 };
 
 const debouncedTranslate = debounce(translatePage, 1000);
 
-// Enhanced MutationObserver with stability check
+// Set up mutation observer
 const observer = new MutationObserver((mutations) => {
-    const significantChanges = mutations.some(mutation => {
-        // Ignore changes to translated elements
-        if (mutation.target.hasAttribute('data-translated')) return false;
-        
-        // Ignore style/class changes
-        if (mutation.type === 'attributes' && 
-            (mutation.attributeName === 'style' || 
-             mutation.attributeName === 'class')) return false;
-
-        return true;
+    const shouldTranslate = mutations.some(mutation => {
+        const target = mutation.target;
+        return !(target instanceof Text && target.parentElement?.hasAttribute('data-translated'));
     });
     
-    if (significantChanges) {
-        console.log("Significant content changes detected, waiting for stability...");
+    if (shouldTranslate) {
+        console.log("New content detected, re-translating...");
         debouncedTranslate();
     }
 });
@@ -631,15 +602,12 @@ const observer = new MutationObserver((mutations) => {
 observer.observe(document.body, {
     childList: true,
     subtree: true,
-    attributes: true,
     characterData: true
 });
 
-// Initialize translation with a delay
+// Initialize translation
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        setTimeout(translatePage, 1500); // Wait 1.5s after DOM content loaded
-    });
+    document.addEventListener('DOMContentLoaded', translatePage);
 } else {
-    setTimeout(translatePage, 1500);
+    translatePage();
 }
