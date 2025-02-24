@@ -389,47 +389,68 @@ document.addEventListener('click', (event) =>{
 });
 
 async function translatePage() {
-    const userLang = navigator.language || navigator.userLanguage; // Detect browser language
-    const targetLang = 'us'; // Target language code
+    const userLang = navigator.language || navigator.userLanguage;
+    const targetLang = 'us';
 
     console.log("User Language:", userLang);
     console.log("Target Language:", targetLang);
 
-    // Extract all text nodes using both TreeWalker and querySelectorAll
-    const textNodes = [];
-    const textContents = [];
+    // Improved text node collection
+    const textMapping = new Map();
+    
+    // Helper function to process text
+    const processText = (text) => {
+        return text.trim().replace(/\s+/g, ' ');
+    };
 
     // TreeWalker for deeper text nodes
-    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+            acceptNode: (node) => {
+                const parent = node.parentNode;
+                if (!parent || 
+                    parent.closest('[data-translated="true"]') ||
+                    parent.tagName === 'SCRIPT' ||
+                    parent.tagName === 'STYLE') {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        }
+    );
+
     let node;
     while ((node = walker.nextNode())) {
-        if (node.parentNode && !node.parentNode.closest('[data-translated="true"]')) {
-            const originalText = node.textContent.trim();
-            if (originalText) {
-                textNodes.push(node);
-                textContents.push(originalText);
-            }
+        const text = processText(node.textContent);
+        if (text) {
+            textMapping.set(node, text);
         }
     }
 
-    // Also collect innerText from common elements
-    document.querySelectorAll("h1, h2, h3, p").forEach(el => {
+    // Collect text from specific elements
+    document.querySelectorAll("h1, h2, h3, p, button, input[type='text'], textarea").forEach(el => {
         if (!el.closest('[data-translated="true"]')) {
-            let text = el.innerText.trim() || el.placeholder?.trim();
+            const text = processText(el.innerText || el.placeholder || '');
             if (text) {
-                textNodes.push(el);
-                textContents.push(text);
+                textMapping.set(el, text);
             }
         }
     });
 
-    if (textContents.length === 0) return;
+    if (textMapping.size === 0) return;
+
+    const textContents = Array.from(textMapping.values());
     console.log("Text to translate:", textContents);
 
     try {
         const res = await fetch("https://383a-104-199-172-31.ngrok-free.app/translate", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: { 
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
             mode: "cors",
             body: JSON.stringify({
                 q: textContents,
@@ -439,75 +460,92 @@ async function translatePage() {
         });
 
         if (!res.ok) {
-            const errorDetails = await res.text();
-            console.error(`API Error (${res.status}): ${errorDetails}`);
-            return;
+            throw new Error(`API Error (${res.status}): ${await res.text()}`);
         }
 
         const data = await res.json();
-        console.log("API Response:", data);
-
-        let translatedTexts;
-        try {
-            let formattedString = data.translatedText
-                .replace(/'/g, '"')  // Convert single quotes to double quotes
-                .replace(/"\s*,\s*"/g, '","') // Remove extra spaces after commas
-                .replace(/"\s*\n\s*"/g, '","') // Handle new lines properly
-                .replace(/"\s*<iframe/gi, '"<escaped-iframe') // Escape problematic iframe elements
-                .replace(/\\"/g, "'") // Fix escaped quotes
-                .replace(/"\s*Page \d+ of \d+ Pages\s*"/g, '"Page Info"'); // Fix pagination text
-
-
-            // Ensure it is a valid JSON format before parsing
-            if (!formattedString.startsWith("[") || !formattedString.endsWith("]")) {
-                console.error("Invalid JSON format received:", formattedString);
-                return;
-            }
-            translatedTexts = JSON.parse(formattedString);
-        } catch (parseError) {
-            console.error("Error parsing translatedText:", parseError, "Received:", data.translatedText);
-            return;
+        
+        if (!data.translatedText || typeof data.translatedText !== 'string') {
+            throw new Error('Invalid API response format');
         }
 
-        if (!Array.isArray(translatedTexts) || translatedTexts.length === 0) {
-            console.error("Unexpected API response format. Check API response:", data);
-            return;
+        // Safer JSON parsing with pre-processing
+        const cleanResponse = data.translatedText
+            .replace(/\r?\n|\r/g, ' ') // Replace newlines with spaces
+            .replace(/\s+/g, ' ') // Normalize spaces
+            .replace(/'/g, '"') // Standardize quotes
+            .replace(/\\"/g, "'") // Fix escaped quotes
+            .trim();
+
+        const translatedTexts = JSON.parse(cleanResponse);
+
+        if (!Array.isArray(translatedTexts) || translatedTexts.length !== textContents.length) {
+            throw new Error('Translation array length mismatch');
         }
 
-        console.log("Parsed Translated Texts:", translatedTexts);
-
-        // Apply translations and mark translated elements
-        textNodes.forEach((node, i) => {
-            if (node.nodeType === Node.TEXT_NODE) {
-                node.textContent = translatedTexts[i] || textContents[i];
+        // Apply translations
+        let i = 0;
+        for (const [node, originalText] of textMapping.entries()) {
+            const translation = translatedTexts[i++];
+            
+            if (node instanceof Text) {
+                node.textContent = translation || originalText;
             } else if (node instanceof HTMLElement) {
-                if (node.placeholder) {
-                    node.placeholder = translatedTexts[i] || textContents[i];
+                if (node.hasAttribute('placeholder')) {
+                    node.placeholder = translation || originalText;
                 } else {
-                    node.innerText = translatedTexts[i] || textContents[i];
+                    node.innerText = translation || originalText;
                 }
             }
-        });
+            
+            // Mark as translated
+            const parentElement = node instanceof Text ? node.parentElement : node;
+            if (parentElement) {
+                parentElement.setAttribute('data-translated', 'true');
+            }
+        }
 
         console.log("Translation completed successfully!");
     } catch (error) {
         console.error("Translation error:", error);
+        // Optionally implement retry logic here
     }
 }
 
-// MutationObserver with debouncing
-let observerTimeout;
-const observer = new MutationObserver(() => {
-    clearTimeout(observerTimeout);
-    observerTimeout = setTimeout(() => {
+// Improved MutationObserver implementation
+const observerOptions = {
+    childList: true,
+    subtree: true,
+    characterData: true
+};
+
+const debounce = (fn, delay) => {
+    let timeoutId;
+    return (...args) => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => fn(...args), delay);
+    };
+};
+
+const debouncedTranslate = debounce(translatePage, 1000);
+
+const observer = new MutationObserver((mutations) => {
+    const shouldTranslate = mutations.some(mutation => {
+        const target = mutation.target;
+        return !(target instanceof Text && target.parentElement?.hasAttribute('data-translated'));
+    });
+    
+    if (shouldTranslate) {
         console.log("New content detected, re-translating...");
-        translatePage();
-    }, 1000); // Debounce to prevent excessive API calls
+        debouncedTranslate();
+    }
 });
 
-observer.observe(document.body, { childList: true, subtree: true });
+observer.observe(document.body, observerOptions);
 
-// Run translation after page load
-document.addEventListener("DOMContentLoaded", translatePage);
-
-
+// Initialize translation
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', translatePage);
+} else {
+    translatePage();
+}
