@@ -460,6 +460,10 @@ async function translatePage() {
         console.error("Translation error:", error);
     }
 }
+const observer = new MutationObserver(() => {
+    translatePage();
+});
+observer.observe(document.body, { childList: true, subtree: true });
 
 // Run translation after the page has fully loaded
 document.addEventListener("DOMContentLoaded", translatePage);
