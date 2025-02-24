@@ -412,26 +412,39 @@ async function translatePage() {
         return initialHash === finalHash;
     };
 
+    // Function to safely get class names as a string
+    const getClassNames = (element) => {
+        if (element.className && typeof element.className === 'string') {
+            return element.className;
+        }
+        if (element.className && element.className.baseVal) {
+            return element.className.baseVal;
+        }
+        return element.getAttribute('class') || '';
+    };
+
     // Function to check if an element is likely to be dynamically updated
     const isDynamicContent = (node) => {
         const parent = node instanceof Text ? node.parentElement : node;
         if (!parent) return false;
 
         // Check for common dynamic content indicators
-        const hasDataAttributes = Array.from(parent.attributes).some(attr => 
+        const hasDataAttributes = Array.from(parent.attributes || []).some(attr => 
             attr.name.startsWith('data-') && 
             !attr.name.includes('translated')
         );
         
-        const hasLoadingClass = parent.className.toLowerCase().includes('loading');
+        const classNames = getClassNames(parent).toLowerCase();
+        const hasLoadingClass = classNames.includes('loading');
         const isPlaceholder = parent.getAttribute('aria-busy') === 'true' ||
-                            parent.className.toLowerCase().includes('placeholder');
+                            classNames.includes('placeholder');
         
         return hasDataAttributes || hasLoadingClass || isPlaceholder;
     };
 
     // Helper function to process text
     const processText = (text) => {
+        if (typeof text !== 'string') return '';
         return text.trim()
             .replace(/\s+/g, ' ')
             .replace(/[\u2018\u2019]/g, "'")
@@ -452,48 +465,49 @@ async function translatePage() {
     // Collect text nodes
     const textMapping = new Map();
     
-    // Use TreeWalker for text nodes
-    const walker = document.createTreeWalker(
-        document.body,
-        NodeFilter.SHOW_TEXT,
-        {
-            acceptNode: (node) => {
-                const parent = node.parentNode;
-                if (!parent || 
-                    parent.closest('[data-translated="true"]') ||
-                    parent.tagName === 'SCRIPT' ||
-                    parent.tagName === 'STYLE' ||
-                    isDynamicContent(node)) {
-                    return NodeFilter.FILTER_REJECT;
-                }
-                return NodeFilter.FILTER_ACCEPT;
-            }
-        }
-    );
-
-    let node;
-    while ((node = walker.nextNode())) {
-        const text = processText(node.textContent);
-        if (text) {
-            textMapping.set(node, text);
-        }
-    }
-
-    // Collect from specific elements
-    document.querySelectorAll("h1, h2, h3, p, button, input[type='text'], textarea").forEach(el => {
-        if (!el.closest('[data-translated="true"]') && !isDynamicContent(el)) {
-            const text = processText(el.innerText || el.placeholder || '');
-            if (text) {
-                textMapping.set(el, text);
-            }
-        }
-    });
-
-    if (textMapping.size === 0) return;
-
-    const textContents = Array.from(textMapping.values());
-    
     try {
+        // Use TreeWalker for text nodes
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode: (node) => {
+                    if (!node || !node.parentNode) return NodeFilter.FILTER_REJECT;
+                    
+                    const parent = node.parentNode;
+                    if (parent.closest('[data-translated="true"]') ||
+                        parent.tagName === 'SCRIPT' ||
+                        parent.tagName === 'STYLE' ||
+                        isDynamicContent(node)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+
+        let node;
+        while ((node = walker.nextNode())) {
+            const text = processText(node.textContent);
+            if (text) {
+                textMapping.set(node, text);
+            }
+        }
+
+        // Collect from specific elements
+        document.querySelectorAll("h1, h2, h3, p, button, input[type='text'], textarea").forEach(el => {
+            if (!el.closest('[data-translated="true"]') && !isDynamicContent(el)) {
+                const text = processText(el.innerText || el.placeholder || '');
+                if (text) {
+                    textMapping.set(el, text);
+                }
+            }
+        });
+
+        if (textMapping.size === 0) return;
+
+        const textContents = Array.from(textMapping.values());
+        
         const res = await fetch("https://383a-104-199-172-31.ngrok-free.app/translate", {
             method: "POST",
             headers: { 
