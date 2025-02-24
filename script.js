@@ -395,22 +395,34 @@ async function translatePage() {
     console.log("User Language:", userLang);
     console.log("Target Language:", targetLang);
 
-    // Create a TreeWalker to extract text nodes from all selected elements
-    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-
+    // Extract all text nodes using both TreeWalker and querySelectorAll
     const textNodes = [];
     const textContents = [];
 
+    // TreeWalker for deeper text nodes
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
     let node;
     while ((node = walker.nextNode())) {
-        const originalText = node.textContent.trim();
-        if (originalText) {
-            textNodes.push(node);
-            textContents.push(originalText);
+        if (node.parentNode && !node.parentNode.closest('[data-translated="true"]')) {
+            const originalText = node.textContent.trim();
+            if (originalText) {
+                textNodes.push(node);
+                textContents.push(originalText);
+            }
         }
     }
 
-    // Check if there is anything to translate
+    // Also collect innerText from common elements
+    document.querySelectorAll("h1, h2, h3, p, span, a, button, label, input[placeholder], textarea[placeholder]").forEach(el => {
+        if (!el.closest('[data-translated="true"]')) {
+            let text = el.innerText.trim() || el.placeholder?.trim();
+            if (text) {
+                textNodes.push(el);
+                textContents.push(text);
+            }
+        }
+    });
+
     if (textContents.length === 0) return;
     console.log("Text to translate:", textContents);
 
@@ -420,7 +432,7 @@ async function translatePage() {
             headers: { "Content-Type": "application/json" },
             mode: "cors",
             body: JSON.stringify({
-                q: textContents, // Send array of texts for batch translation
+                q: textContents,
                 source: userLang,
                 target: targetLang
             })
@@ -433,11 +445,12 @@ async function translatePage() {
         }
 
         const data = await res.json();
-        console.log(data);
+        console.log("API Response:", data);
+
         let translatedTexts;
         try {
-            const formattedString = data.translatedText.replace(/'/g, '"'); // Replace single quotes with double quotes
-            translatedTexts = JSON.parse(formattedString); // Convert string to array
+            const formattedString = data.translatedText.replace(/'/g, '"'); // Fix single-quote issue
+            translatedTexts = JSON.parse(formattedString);
         } catch (parseError) {
             console.error("Error parsing translatedText:", parseError);
             return;
@@ -450,9 +463,19 @@ async function translatePage() {
 
         console.log("Parsed Translated Texts:", translatedTexts);
 
-        // Apply translations
+        // Apply translations and mark translated elements
         textNodes.forEach((node, i) => {
-            node.textContent = translatedTexts[i] || textContents[i]; // Use translation or fallback to original
+            if (node.nodeType === Node.TEXT_NODE) {
+                node.textContent = translatedTexts[i] || textContents[i];
+                node.parentNode.setAttribute("data-translated", "true"); // Mark parent to prevent re-translation
+            } else if (node instanceof HTMLElement) {
+                if (node.placeholder) {
+                    node.placeholder = translatedTexts[i] || textContents[i];
+                } else {
+                    node.innerText = translatedTexts[i] || textContents[i];
+                }
+                node.setAttribute("data-translated", "true");
+            }
         });
 
         console.log("Translation completed successfully!");
@@ -460,11 +483,20 @@ async function translatePage() {
         console.error("Translation error:", error);
     }
 }
+
+// MutationObserver with debouncing
+let observerTimeout;
 const observer = new MutationObserver(() => {
-    translatePage();
+    clearTimeout(observerTimeout);
+    observerTimeout = setTimeout(() => {
+        console.log("New content detected, re-translating...");
+        translatePage();
+    }, 1000); // Debounce to prevent excessive API calls
 });
+
 observer.observe(document.body, { childList: true, subtree: true });
 
-// Run translation after the page has fully loaded
+// Run translation after page load
 document.addEventListener("DOMContentLoaded", translatePage);
+
 
