@@ -392,7 +392,45 @@ async function translatePage() {
     const userLang = navigator.language || navigator.userLanguage;
     const targetLang = 'us';
 
-    // Helper function to process text before translation
+    // Helper function to get a content hash for detecting changes
+    const getContentHash = () => {
+        const content = document.body.innerText;
+        let hash = 0;
+        for (let i = 0; i < content.length; i++) {
+            const char = content.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash = hash & hash;
+        }
+        return hash;
+    };
+
+    // Function to check if content is stable
+    const isContentStable = async () => {
+        const initialHash = getContentHash();
+        await new Promise(resolve => setTimeout(resolve, 500)); // Wait 500ms
+        const finalHash = getContentHash();
+        return initialHash === finalHash;
+    };
+
+    // Function to check if an element is likely to be dynamically updated
+    const isDynamicContent = (node) => {
+        const parent = node instanceof Text ? node.parentElement : node;
+        if (!parent) return false;
+
+        // Check for common dynamic content indicators
+        const hasDataAttributes = Array.from(parent.attributes).some(attr => 
+            attr.name.startsWith('data-') && 
+            !attr.name.includes('translated')
+        );
+        
+        const hasLoadingClass = parent.className.toLowerCase().includes('loading');
+        const isPlaceholder = parent.getAttribute('aria-busy') === 'true' ||
+                            parent.className.toLowerCase().includes('placeholder');
+        
+        return hasDataAttributes || hasLoadingClass || isPlaceholder;
+    };
+
+    // Helper function to process text
     const processText = (text) => {
         return text.trim()
             .replace(/\s+/g, ' ')
@@ -400,24 +438,18 @@ async function translatePage() {
             .replace(/[\u201C\u201D]/g, '"');
     };
 
-    // Helper function to clean JSON response
-    const cleanJsonResponse = (text) => {
-        return text
-            // First, standardize all quotes
-            .replace(/[\u2018\u2019'']/g, "'")  // Convert all single smart quotes to simple quotes
-            .replace(/[\u201C\u201D""]/g, '"')  // Convert all double smart quotes to simple quotes
-            // Handle array syntax
-            .replace(/^\[\'/, '["')  // Fix opening of array
-            .replace(/\'\]$/, '"]')  // Fix closing of array
-            .replace(/\',\s*\'/g, '","')  // Fix delimiters between elements
-            // Clean up any remaining issues
-            .replace(/\\'/g, "'")  // Handle escaped single quotes
-            .replace(/\\"/g, '"')  // Handle escaped double quotes
-            .replace(/\s+/g, ' ')  // Normalize spaces
-            .trim();
-    };
+    // Wait for content to stabilize
+    const maxAttempts = 5;
+    let attempts = 0;
+    
+    while (attempts < maxAttempts) {
+        const stable = await isContentStable();
+        if (stable) break;
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        attempts++;
+    }
 
-    // Collect text nodes for translation
+    // Collect text nodes
     const textMapping = new Map();
     
     // Use TreeWalker for text nodes
@@ -430,7 +462,8 @@ async function translatePage() {
                 if (!parent || 
                     parent.closest('[data-translated="true"]') ||
                     parent.tagName === 'SCRIPT' ||
-                    parent.tagName === 'STYLE') {
+                    parent.tagName === 'STYLE' ||
+                    isDynamicContent(node)) {
                     return NodeFilter.FILTER_REJECT;
                 }
                 return NodeFilter.FILTER_ACCEPT;
@@ -446,9 +479,9 @@ async function translatePage() {
         }
     }
 
-    // Also collect from specific elements
+    // Collect from specific elements
     document.querySelectorAll("h1, h2, h3, p, button, input[type='text'], textarea").forEach(el => {
-        if (!el.closest('[data-translated="true"]')) {
+        if (!el.closest('[data-translated="true"]') && !isDynamicContent(el)) {
             const text = processText(el.innerText || el.placeholder || '');
             if (text) {
                 textMapping.set(el, text);
@@ -485,16 +518,18 @@ async function translatePage() {
             throw new Error('Invalid API response format');
         }
 
-        // Clean and parse the response
-        const cleanedResponse = cleanJsonResponse(data.translatedText);
-        console.log("Cleaned response:", cleanedResponse);
-
+        // Parse the translation response
         let translatedTexts;
         try {
-            translatedTexts = JSON.parse(cleanedResponse);
-        } catch (parseError) {
-            console.error("Parse error with cleaned response:", cleanedResponse);
-            throw parseError;
+            translatedTexts = JSON.parse(data.translatedText);
+        } catch (e) {
+            // If parsing fails, try to clean the response
+            const cleaned = data.translatedText
+                .replace(/^\[?|\]?$/g, '')
+                .split(',')
+                .map(item => `"${item.trim().replace(/^["']|["']$/g, '').replace(/"/g, '\\"')}"`)
+                .join(',');
+            translatedTexts = JSON.parse(`[${cleaned}]`);
         }
 
         if (!Array.isArray(translatedTexts)) {
@@ -504,6 +539,9 @@ async function translatePage() {
         // Apply translations
         let i = 0;
         for (const [node, originalText] of textMapping.entries()) {
+            // Skip if the node has been dynamically updated
+            if (isDynamicContent(node)) continue;
+
             const translation = translatedTexts[i++] || originalText;
             
             try {
@@ -532,26 +570,46 @@ async function translatePage() {
     }
 }
 
-// Enhanced debounce implementation
+// Improved debounce with content stability check
 const debounce = (fn, delay) => {
     let timeoutId;
+    let lastRun = 0;
+    const minInterval = 2000; // Minimum time between runs
+
     return (...args) => {
         clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => fn(...args), delay);
+        
+        const now = Date.now();
+        if (now - lastRun < minInterval) {
+            timeoutId = setTimeout(() => {
+                lastRun = Date.now();
+                fn(...args);
+            }, delay);
+        } else {
+            lastRun = now;
+            fn(...args);
+        }
     };
 };
 
 const debouncedTranslate = debounce(translatePage, 1000);
 
-// Set up mutation observer
+// Enhanced MutationObserver with stability check
 const observer = new MutationObserver((mutations) => {
-    const shouldTranslate = mutations.some(mutation => {
-        const target = mutation.target;
-        return !(target instanceof Text && target.parentElement?.hasAttribute('data-translated'));
+    const significantChanges = mutations.some(mutation => {
+        // Ignore changes to translated elements
+        if (mutation.target.hasAttribute('data-translated')) return false;
+        
+        // Ignore style/class changes
+        if (mutation.type === 'attributes' && 
+            (mutation.attributeName === 'style' || 
+             mutation.attributeName === 'class')) return false;
+
+        return true;
     });
     
-    if (shouldTranslate) {
-        console.log("New content detected, re-translating...");
+    if (significantChanges) {
+        console.log("Significant content changes detected, waiting for stability...");
         debouncedTranslate();
     }
 });
@@ -559,12 +617,15 @@ const observer = new MutationObserver((mutations) => {
 observer.observe(document.body, {
     childList: true,
     subtree: true,
+    attributes: true,
     characterData: true
 });
 
-// Initialize translation
+// Initialize translation with a delay
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', translatePage);
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(translatePage, 1500); // Wait 1.5s after DOM content loaded
+    });
 } else {
-    translatePage();
+    setTimeout(translatePage, 1500);
 }
