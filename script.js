@@ -453,7 +453,10 @@ async function translatePage() {
                 .replace(/'/g, '"')  // Convert single quotes to double quotes
                 .replace(/"\s*,\s*"/g, '","') // Remove extra spaces after commas
                 .replace(/"\s*\n\s*"/g, '","') // Handle new lines properly
-                .replace(/"\s*<iframe/gi, '"<escaped-iframe'); // Escape problematic iframe elements
+                .replace(/"\s*<iframe/gi, '"<escaped-iframe') // Escape problematic iframe elements
+                .replace(/\\"/g, "'") // Fix escaped quotes
+                .replace(/"\s*Page \d+ of \d+ Pages\s*"/g, '"Page Info"'); // Fix pagination text
+
 
             // Ensure it is a valid JSON format before parsing
             if (!formattedString.startsWith("[") || !formattedString.endsWith("]")) {
