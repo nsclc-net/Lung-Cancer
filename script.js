@@ -413,7 +413,7 @@ async function translatePage() {
     }
 
     // Also collect innerText from common elements
-    document.querySelectorAll("h1, h2, h3, p, span, a").forEach(el => {
+    document.querySelectorAll("h1, h2, h3, p").forEach(el => {
         if (!el.closest('[data-translated="true"]')) {
             let text = el.innerText.trim() || el.placeholder?.trim();
             if (text) {
