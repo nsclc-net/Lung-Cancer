@@ -449,7 +449,9 @@ async function translatePage() {
 
         let translatedTexts;
         try {
-            const formattedString = data.translatedText.replace(/'/g, '"'); // Fix single-quote issue
+            let formattedString = data.translatedText.replace(/'/g, '"').replace(/\s*,\s*/g, ',').trim();
+
+            // Ensure it is a valid JSON format before parsing
             if (!formattedString.startsWith("[") || !formattedString.endsWith("]")) {
                 console.error("Invalid JSON format received:", formattedString);
                 return;
