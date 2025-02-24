@@ -449,7 +449,11 @@ async function translatePage() {
 
         let translatedTexts;
         try {
-            let formattedString = data.translatedText.replace(/'/g, '"').replace(/\s*,\s*/g, ',').trim();
+            let formattedString = data.translatedText
+                .replace(/'/g, '"')  // Convert single quotes to double quotes
+                .replace(/"\s*,\s*"/g, '","') // Remove extra spaces after commas
+                .replace(/"\s*\n\s*"/g, '","') // Handle new lines properly
+                .replace(/"\s*<iframe/gi, '"<escaped-iframe'); // Escape problematic iframe elements
 
             // Ensure it is a valid JSON format before parsing
             if (!formattedString.startsWith("[") || !formattedString.endsWith("]")) {
