@@ -392,13 +392,7 @@ async function translatePage() {
     const userLang = navigator.language || navigator.userLanguage;
     const targetLang = 'us';
 
-    console.log("User Language:", userLang);
-    console.log("Target Language:", targetLang);
-
-    // Improved text node collection
-    const textMapping = new Map();
-    
-    // Helper function to process text
+    // Helper function to process text before translation
     const processText = (text) => {
         return text.trim()
             .replace(/\s+/g, ' ')
@@ -406,20 +400,27 @@ async function translatePage() {
             .replace(/[\u201C\u201D]/g, '"');
     };
 
-    // Helper function to clean translation array elements
-    const cleanTranslationElement = (text) => {
+    // Helper function to clean JSON response
+    const cleanJsonResponse = (text) => {
         return text
-            // Fix common issues with date strings
-            .replace(/(\d{4})\/(\d{2})\/(\d{2})\s+(\d{2}):(\d{2}):(\d{2})/, '"$1/$2/$3 $4:$5:$6"')
-            // Fix "Tags:" formatting
-            .replace(/(\|\s*Tags:)([^|"]+)/, '$1"$2"')
-            // Handle nested quotes properly
-            .replace(/"([^"]*)"/, (match, p1) => `"${p1.replace(/"/g, '\\"')}"`)
-            // Fix broken array elements
-            .replace(/,\s*([^,\[\]"]+?)\s*([,\]])/g, ',"$1"$2');
+            // First, standardize all quotes
+            .replace(/[\u2018\u2019'']/g, "'")  // Convert all single smart quotes to simple quotes
+            .replace(/[\u201C\u201D""]/g, '"')  // Convert all double smart quotes to simple quotes
+            // Handle array syntax
+            .replace(/^\[\'/, '["')  // Fix opening of array
+            .replace(/\'\]$/, '"]')  // Fix closing of array
+            .replace(/\',\s*\'/g, '","')  // Fix delimiters between elements
+            // Clean up any remaining issues
+            .replace(/\\'/g, "'")  // Handle escaped single quotes
+            .replace(/\\"/g, '"')  // Handle escaped double quotes
+            .replace(/\s+/g, ' ')  // Normalize spaces
+            .trim();
     };
 
-    // TreeWalker for deeper text nodes with improved filtering
+    // Collect text nodes for translation
+    const textMapping = new Map();
+    
+    // Use TreeWalker for text nodes
     const walker = document.createTreeWalker(
         document.body,
         NodeFilter.SHOW_TEXT,
@@ -429,8 +430,7 @@ async function translatePage() {
                 if (!parent || 
                     parent.closest('[data-translated="true"]') ||
                     parent.tagName === 'SCRIPT' ||
-                    parent.tagName === 'STYLE' ||
-                    parent.tagName === 'NOSCRIPT') {
+                    parent.tagName === 'STYLE') {
                     return NodeFilter.FILTER_REJECT;
                 }
                 return NodeFilter.FILTER_ACCEPT;
@@ -446,7 +446,7 @@ async function translatePage() {
         }
     }
 
-    // Collect text from specific elements
+    // Also collect from specific elements
     document.querySelectorAll("h1, h2, h3, p, button, input[type='text'], textarea").forEach(el => {
         if (!el.closest('[data-translated="true"]')) {
             const text = processText(el.innerText || el.placeholder || '');
@@ -459,8 +459,7 @@ async function translatePage() {
     if (textMapping.size === 0) return;
 
     const textContents = Array.from(textMapping.values());
-    console.log("Text to translate:", textContents);
-
+    
     try {
         const res = await fetch("https://383a-104-199-172-31.ngrok-free.app/translate", {
             method: "POST",
@@ -486,42 +485,27 @@ async function translatePage() {
             throw new Error('Invalid API response format');
         }
 
-        // Improved JSON parsing with better preprocessing
-        let cleanResponse = data.translatedText
-            .replace(/\r?\n|\r/g, ' ') // Replace newlines with spaces
-            .replace(/\s+/g, ' ') // Normalize spaces
-            .trim();
+        // Clean and parse the response
+        const cleanedResponse = cleanJsonResponse(data.translatedText);
+        console.log("Cleaned response:", cleanedResponse);
 
-        // Ensure array brackets are present
-        if (!cleanResponse.startsWith('[')) cleanResponse = '[' + cleanResponse;
-        if (!cleanResponse.endsWith(']')) cleanResponse += ']';
-
-        // Clean each array element
-        cleanResponse = cleanResponse
-            .replace(/\[([^\]]+)\]/g, (match, content) => {
-                const elements = content.split(',');
-                const cleanedElements = elements.map(cleanTranslationElement);
-                return '[' + cleanedElements.join(',') + ']';
-            });
-
-        console.log("Cleaned response:", cleanResponse);
-
-        const translatedTexts = JSON.parse(cleanResponse);
+        let translatedTexts;
+        try {
+            translatedTexts = JSON.parse(cleanedResponse);
+        } catch (parseError) {
+            console.error("Parse error with cleaned response:", cleanedResponse);
+            throw parseError;
+        }
 
         if (!Array.isArray(translatedTexts)) {
             throw new Error('Translation result is not an array');
         }
 
-        // Apply translations with validation
+        // Apply translations
         let i = 0;
         for (const [node, originalText] of textMapping.entries()) {
-            const translation = translatedTexts[i++];
+            const translation = translatedTexts[i++] || originalText;
             
-            if (!translation) {
-                console.warn(`Missing translation for text: ${originalText}`);
-                continue;
-            }
-
             try {
                 if (node instanceof Text) {
                     node.textContent = translation;
@@ -533,7 +517,6 @@ async function translatePage() {
                     }
                 }
                 
-                // Mark as translated
                 const parentElement = node instanceof Text ? node.parentElement : node;
                 if (parentElement) {
                     parentElement.setAttribute('data-translated', 'true');
@@ -546,34 +529,25 @@ async function translatePage() {
         console.log("Translation completed successfully!");
     } catch (error) {
         console.error("Translation error:", error);
-        // Implement retry logic here if needed
     }
 }
 
-// Improved debounce implementation
+// Enhanced debounce implementation
 const debounce = (fn, delay) => {
     let timeoutId;
     return (...args) => {
-        if (timeoutId) {
-            clearTimeout(timeoutId);
-        }
-        timeoutId = setTimeout(() => {
-            timeoutId = null;
-            fn(...args);
-        }, delay);
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => fn(...args), delay);
     };
 };
 
 const debouncedTranslate = debounce(translatePage, 1000);
 
-// Enhanced MutationObserver
+// Set up mutation observer
 const observer = new MutationObserver((mutations) => {
     const shouldTranslate = mutations.some(mutation => {
         const target = mutation.target;
-        return !(
-            target instanceof Text && 
-            target.parentElement?.hasAttribute('data-translated')
-        );
+        return !(target instanceof Text && target.parentElement?.hasAttribute('data-translated'));
     });
     
     if (shouldTranslate) {
