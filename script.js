@@ -450,9 +450,13 @@ async function translatePage() {
         let translatedTexts;
         try {
             const formattedString = data.translatedText.replace(/'/g, '"'); // Fix single-quote issue
+            if (!formattedString.startsWith("[") || !formattedString.endsWith("]")) {
+                console.error("Invalid JSON format received:", formattedString);
+                return;
+            }
             translatedTexts = JSON.parse(formattedString);
         } catch (parseError) {
-            console.error("Error parsing translatedText:", parseError);
+            console.error("Error parsing translatedText:", parseError, "Received:", data.translatedText);
             return;
         }
 
@@ -467,7 +471,9 @@ async function translatePage() {
         textNodes.forEach((node, i) => {
             if (node.nodeType === Node.TEXT_NODE) {
                 node.textContent = translatedTexts[i] || textContents[i];
-                node.parentNode.setAttribute("data-translated", "true"); // Mark parent to prevent re-translation
+                if (node.parentNode) {
+                    node.parentNode.setAttribute("data-translated", "true");
+                }
             } else if (node instanceof HTMLElement) {
                 if (node.placeholder) {
                     node.placeholder = translatedTexts[i] || textContents[i];
