@@ -400,10 +400,26 @@ async function translatePage() {
     
     // Helper function to process text
     const processText = (text) => {
-        return text.trim().replace(/\s+/g, ' ');
+        return text.trim()
+            .replace(/\s+/g, ' ')
+            .replace(/[\u2018\u2019]/g, "'")
+            .replace(/[\u201C\u201D]/g, '"');
     };
 
-    // TreeWalker for deeper text nodes
+    // Helper function to clean translation array elements
+    const cleanTranslationElement = (text) => {
+        return text
+            // Fix common issues with date strings
+            .replace(/(\d{4})\/(\d{2})\/(\d{2})\s+(\d{2}):(\d{2}):(\d{2})/, '"$1/$2/$3 $4:$5:$6"')
+            // Fix "Tags:" formatting
+            .replace(/(\|\s*Tags:)([^|"]+)/, '$1"$2"')
+            // Handle nested quotes properly
+            .replace(/"([^"]*)"/, (match, p1) => `"${p1.replace(/"/g, '\\"')}"`)
+            // Fix broken array elements
+            .replace(/,\s*([^,\[\]"]+?)\s*([,\]])/g, ',"$1"$2');
+    };
+
+    // TreeWalker for deeper text nodes with improved filtering
     const walker = document.createTreeWalker(
         document.body,
         NodeFilter.SHOW_TEXT,
@@ -413,7 +429,8 @@ async function translatePage() {
                 if (!parent || 
                     parent.closest('[data-translated="true"]') ||
                     parent.tagName === 'SCRIPT' ||
-                    parent.tagName === 'STYLE') {
+                    parent.tagName === 'STYLE' ||
+                    parent.tagName === 'NOSCRIPT') {
                     return NodeFilter.FILTER_REJECT;
                 }
                 return NodeFilter.FILTER_ACCEPT;
@@ -469,70 +486,94 @@ async function translatePage() {
             throw new Error('Invalid API response format');
         }
 
-        // Safer JSON parsing with pre-processing
-        const cleanResponse = data.translatedText
+        // Improved JSON parsing with better preprocessing
+        let cleanResponse = data.translatedText
             .replace(/\r?\n|\r/g, ' ') // Replace newlines with spaces
             .replace(/\s+/g, ' ') // Normalize spaces
-            .replace(/'/g, '"') // Standardize quotes
-            .replace(/\\"/g, "'") // Fix escaped quotes
             .trim();
+
+        // Ensure array brackets are present
+        if (!cleanResponse.startsWith('[')) cleanResponse = '[' + cleanResponse;
+        if (!cleanResponse.endsWith(']')) cleanResponse += ']';
+
+        // Clean each array element
+        cleanResponse = cleanResponse
+            .replace(/\[([^\]]+)\]/g, (match, content) => {
+                const elements = content.split(',');
+                const cleanedElements = elements.map(cleanTranslationElement);
+                return '[' + cleanedElements.join(',') + ']';
+            });
+
+        console.log("Cleaned response:", cleanResponse);
 
         const translatedTexts = JSON.parse(cleanResponse);
 
-        if (!Array.isArray(translatedTexts) || translatedTexts.length !== textContents.length) {
-            throw new Error('Translation array length mismatch');
+        if (!Array.isArray(translatedTexts)) {
+            throw new Error('Translation result is not an array');
         }
 
-        // Apply translations
+        // Apply translations with validation
         let i = 0;
         for (const [node, originalText] of textMapping.entries()) {
             const translation = translatedTexts[i++];
             
-            if (node instanceof Text) {
-                node.textContent = translation || originalText;
-            } else if (node instanceof HTMLElement) {
-                if (node.hasAttribute('placeholder')) {
-                    node.placeholder = translation || originalText;
-                } else {
-                    node.innerText = translation || originalText;
-                }
+            if (!translation) {
+                console.warn(`Missing translation for text: ${originalText}`);
+                continue;
             }
-            
-            // Mark as translated
-            const parentElement = node instanceof Text ? node.parentElement : node;
-            if (parentElement) {
-                parentElement.setAttribute('data-translated', 'true');
+
+            try {
+                if (node instanceof Text) {
+                    node.textContent = translation;
+                } else if (node instanceof HTMLElement) {
+                    if (node.hasAttribute('placeholder')) {
+                        node.placeholder = translation;
+                    } else {
+                        node.innerText = translation;
+                    }
+                }
+                
+                // Mark as translated
+                const parentElement = node instanceof Text ? node.parentElement : node;
+                if (parentElement) {
+                    parentElement.setAttribute('data-translated', 'true');
+                }
+            } catch (e) {
+                console.error(`Error applying translation for: ${originalText}`, e);
             }
         }
 
         console.log("Translation completed successfully!");
     } catch (error) {
         console.error("Translation error:", error);
-        // Optionally implement retry logic here
+        // Implement retry logic here if needed
     }
 }
 
-// Improved MutationObserver implementation
-const observerOptions = {
-    childList: true,
-    subtree: true,
-    characterData: true
-};
-
+// Improved debounce implementation
 const debounce = (fn, delay) => {
     let timeoutId;
     return (...args) => {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => fn(...args), delay);
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+        }
+        timeoutId = setTimeout(() => {
+            timeoutId = null;
+            fn(...args);
+        }, delay);
     };
 };
 
 const debouncedTranslate = debounce(translatePage, 1000);
 
+// Enhanced MutationObserver
 const observer = new MutationObserver((mutations) => {
     const shouldTranslate = mutations.some(mutation => {
         const target = mutation.target;
-        return !(target instanceof Text && target.parentElement?.hasAttribute('data-translated'));
+        return !(
+            target instanceof Text && 
+            target.parentElement?.hasAttribute('data-translated')
+        );
     });
     
     if (shouldTranslate) {
@@ -541,7 +582,11 @@ const observer = new MutationObserver((mutations) => {
     }
 });
 
-observer.observe(document.body, observerOptions);
+observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+    characterData: true
+});
 
 // Initialize translation
 if (document.readyState === 'loading') {
