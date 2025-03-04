@@ -3104,6 +3104,159 @@
                 ]
             },
             {
+                "titles": "鉑帝爾注射劑５０公絲臨床研究與實證",
+                "author": "Cancerfree",
+                "no": 2353,
+                "date": "2024/11/11 02:56:00",
+                "tags": [
+                    "化療",
+                    "鉑帝爾注射劑",
+                    "癌症",
+                    "Cisplatin",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "益博生注射劑 (PLACIS INJECTION)：針對多種癌症的全面指南",
+                "author": "Cancerfree",
+                "no": 2354,
+                "date": "2024/11/11 02:55:00",
+                "tags": [
+                    "抗癌藥物",
+                    "癌症藥物",
+                    "益博生注射劑",
+                    "lung cancer",
+                    "gastric cancer",
+                    "breast cancer",
+                    "liver cancer",
+                    "esophageal cancer",
+                    "癌症藥物介紹",
+                    "抗惡性腫瘍",
+                    "藥品認識",
+                    "腫瘍治療",
+                    "藥物機制"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "壓保淨注射劑（ABIPLATIN INJECTION）：終結癌症的利器",
+                "author": "Cancerfree",
+                "no": 2355,
+                "date": "2024/11/11 02:54:00",
+                "tags": [
+                    "胃癌",
+                    "CISPLATIN",
+                    "癌症治療",
+                    "壓保淨注射劑",
+                    "乳癌",
+                    "肝癌",
+                    "肺癌",
+                    "食道癌",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "鉑力定注射劑５０公絲 (CISPLATIN-TEVA INJECTION 50MG) 治療肺癌、乳癌、食道癌、胃癌及肝癌的全面介紹",
+                "author": "Cancerfree",
+                "no": 2356,
+                "date": "2024/11/11 02:53:00",
+                "tags": [
+                    "CISPLATIN-TEVA INJECTION 50MG",
+                    "Gastric Cancer",
+                    "Chemotherapy",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Cancer treatment",
+                    "Breast Cancer",
+                    "癌症藥物介紹",
+                    "Liver Cancer"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "西伯拉丁注射液1公絲/公撮 (CISPLATIN FOR INJECTION \"DBL\") 的詳細介紹",
+                "author": "Cancerfree",
+                "no": 2357,
+                "date": "2024/11/11 02:52:00",
+                "tags": [
+                    "CISPLATIN",
+                    "Gastric Cancer",
+                    "Chemotherapy",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Breast Cancer",
+                    "癌症藥物介紹",
+                    "Liver Cancer",
+                    "Anti-Cancer"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "普樂得星凍晶注射劑50公絲應用於多種癌症治療的深度解析",
+                "author": "Cancerfree",
+                "no": 2358,
+                "date": "2024/11/11 02:51:00",
+                "tags": [
+                    "胃癌",
+                    "普樂得星凍晶注射劑",
+                    "癌症治療",
+                    "肝癌",
+                    "卵巢癌",
+                    "肺癌",
+                    "乳腺癌",
+                    "作用機制",
+                    "睾丸癌",
+                    "食道癌",
+                    "癌症藥物介紹",
+                    "治療適應症",
+                    "用藥須知",
+                    "臨床研究與實證",
+                    "總結展望",
+                    "藥物概述"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer",
+                    "Testicular Cancer"
+                ]
+            },
+            {
                 "titles": "普樂得星凍晶注射劑25公絲: 一種用於治療多種癌症的藥物的綜述",
                 "author": "Cancerfree",
                 "no": 2359,
@@ -3113,9 +3266,9 @@
                     "藥物介紹",
                     "化療",
                     "普樂得星凍晶注射劑２５公絲",
-                    "肺癌",
-                    "肝癌",
                     "乳癌",
+                    "肝癌",
+                    "肺癌",
                     "食道癌",
                     "癌症藥物介紹",
                     "轉移性睪丸腫瘤",
@@ -3123,12 +3276,63 @@
                     "卵巢腫瘤"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "普樂得星凍晶注射劑10公絲：全面解析以及如何用於治療各類癌症",
+                "author": "Cancerfree",
+                "no": 2360,
+                "date": "2024/11/11 02:48:00",
+                "tags": [
+                    "胃癌",
+                    "普樂得星凍晶注射劑１０公絲",
+                    "CISPLATIN",
+                    "肝癌",
+                    "肺癌",
+                    "乳腺癌",
+                    "食道癌",
+                    "癌症藥物介紹",
+                    "轉移性睪丸腫瘤",
+                    "轉移性卵巢腫瘤"
+                ],
+                "website": [
                     "Breast Cancer",
-                    "Esophageal Cancer"
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "鉑帝爾注射劑10公絲 (PLATINOL FOR INJECTION 10MG (CISPLATIN))：初探在癌症治療中的功效與適用領域",
+                "author": "Cancerfree",
+                "no": 2361,
+                "date": "2024/11/11 02:47:00",
+                "tags": [
+                    "鉑帝爾注射劑",
+                    "抗癌藥物",
+                    "CISPLATIN",
+                    "癌症治療",
+                    "癌症",
+                    "癌症藥物介紹",
+                    "臺灣必治妥施貴寶股份有限公司",
+                    "轉移性睪丸腫瘤",
+                    "轉移性卵巢腫瘤",
+                    "膀胱內轉移型細胞腫瘤",
+                    "抗癌療程"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
