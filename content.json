@@ -99,11 +99,11 @@
                     "癌症藥物介紹"
                 ],
                 "website": [
-                    "Gastric Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
+                    "Esophageal Cancer",
                     "Pancreatic Cancer",
-                    "Esophageal Cancer"
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -321,17 +321,17 @@
                     "PACLITAXEL",
                     "疾病治療",
                     "用藥指南",
-                    "胰臟癌",
                     "乳癌",
+                    "胰臟癌",
                     "臨床研究",
                     "食道癌"
                 ],
                 "website": [
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
-                    "Pancreatic Cancer",
-                    "Breast Cancer",
-                    "Esophageal Cancer"
+                    "Esophageal Cancer",
+                    "Pancreatic Cancer"
                 ]
             },
             {
@@ -342,11 +342,9 @@
                 "tags": [
                     "胃癌",
                     "藥物作用機制",
-                    "抗癌藥物",
                     "癌症治療",
-                    "肺癌",
-                    "卵巢癌",
                     "胰腺癌",
+                    "乳癌",
                     "食道癌",
                     "癌症藥物介紹",
                     "藥物敏感性",
@@ -354,11 +352,11 @@
                     "永日化學工業股份有限公司"
                 ],
                 "website": [
-                    "Gastric Cancer",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
                     "Pancreatic Cancer",
-                    "Esophageal Cancer"
+                    "Head and Neck Cancer"
                 ]
             },
             {
@@ -371,19 +369,97 @@
                     "癌症治療",
                     "派力杉注射劑",
                     "Paclitaxel Mylan",
-                    "肺癌",
-                    "卵巢癌",
-                    "胰臟癌",
                     "乳癌",
+                    "卵巢癌",
+                    "肺癌",
+                    "胰臟癌",
                     "食道癌",
                     "癌症藥物介紹"
                 ],
                 "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Esophageal Cancer",
+                    "Pancreatic Cancer"
+                ]
+            },
+            {
+                "titles": "克抑癌注射液 (Paclitero (Paclitaxel Injection 6mg/ml)) ：您的癌症戰友",
+                "author": "Cancerfree",
+                "no": 2166,
+                "date": "2024/11/11 09:20:00",
+                "tags": [
+                    "胃癌",
+                    "癌症",
+                    "化學療法",
+                    "紫杉醇",
+                    "胰臟癌",
+                    "PACLITAXEL"
+                ],
+                "website": [
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
                     "Pancreatic Cancer",
+                    "Head and Neck Cancer"
+                ]
+            },
+            {
+                "titles": "深入瞭解 \"山德士\"帕瘤鎖注射劑6毫克/毫升",
+                "author": "Cancerfree",
+                "no": 2167,
+                "date": "2024/11/11 09:19:00",
+                "tags": [
+                    "癌症治療",
+                    "藥物治療",
+                    "化學治療",
+                    "山德士",
+                    "肺癌",
+                    "帕瘤鎖",
+                    "卵巢癌",
+                    "胰腺癌",
+                    "乳癌",
+                    "食道癌",
+                    "癌症藥物介紹",
+                    "微管解聚抑制劑"
+                ],
+                "website": [
                     "Breast Cancer",
-                    "Esophageal Cancer"
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Esophageal Cancer",
+                    "Pancreatic Cancer"
+                ]
+            },
+            {
+                "titles": "全面介紹亞伯杉注射劑 (Abraxane for Injectable Suspension) 在治療肺癌、食管癌、卵巢癌、胃癌、胰臟癌方面的用途",
+                "author": "Cancerfree",
+                "no": 2168,
+                "date": "2024/11/11 09:18:00",
+                "tags": [
+                    "化療",
+                    "癌症治療",
+                    "亞伯杉注射劑",
+                    "乳癌",
+                    "卵巢癌",
+                    "肺癌",
+                    "胰臟癌",
+                    "PACLITAXEL",
+                    "Abraxane for Injectable Suspension",
+                    "食管癌",
+                    "癌症藥物介紹",
+                    "台灣必治妥施貴寶股份有限公司",
+                    "Abraxis Bio Science LLC",
+                    "BAXTER ONCOLOGY GMBH",
+                    "BOLLORE LOGISTICS SINGAPORE PTE. LTD."
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Esophageal Cancer",
+                    "Pancreatic Cancer"
                 ]
             },
             {
@@ -446,7 +522,29 @@
                     "FOLINIC ACID"
                 ],
                 "website": [
-                    "Gastric Cancer",
+                    "Lung Cancer",
+                    "Pancreatic Cancer",
+                    "Colorectal Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "怡瑞納\"山德士\"20毫克/毫升注射液：肺癌，大腸直腸癌，胃癌，胰臟癌的全面介紹",
+                "author": "Cancerfree",
+                "no": 2216,
+                "date": "2024/11/11 05:59:00",
+                "tags": [
+                    "胃癌",
+                    "化學治療",
+                    "肺癌",
+                    "大腸直腸癌",
+                    "癌症藥物介紹",
+                    "台灣諾華股份有限公司",
+                    "怡瑞納山士德",
+                    "EBEWE Pharma",
+                    "irinotecan hydrochloride trihydrate"
+                ],
+                "website": [
                     "Lung Cancer",
                     "Pancreatic Cancer",
                     "Colorectal Cancer"
@@ -470,10 +568,10 @@
                     "Irenax Injection 40mg/100mg"
                 ],
                 "website": [
-                    "Gastric Cancer",
                     "Lung Cancer",
                     "Pancreatic Cancer",
-                    "Colorectal Cancer"
+                    "Colorectal Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -497,10 +595,108 @@
                     "五氟尿嘧啶"
                 ],
                 "website": [
-                    "Gastric Cancer",
                     "Lung Cancer",
                     "Pancreatic Cancer",
-                    "Colorectal Cancer"
+                    "Colorectal Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "依瑞諾丁濃縮注射液使用於肺癌、大腸直腸癌、胃癌及胰臟癌的治療",
+                "author": "Cancerfree",
+                "no": 2220,
+                "date": "2024/11/11 05:55:00",
+                "tags": [
+                    "胃癌",
+                    "化療",
+                    "癌症治療",
+                    "肺癌",
+                    "依瑞諾丁",
+                    "胰臟癌",
+                    "大腸直腸癌",
+                    "癌症藥物介紹",
+                    "輝瑞大藥廠",
+                    "ZYDUS HOSPIRA",
+                    "久裕企業",
+                    "濃縮注射液"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Pancreatic Cancer",
+                    "Colorectal Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "抗癌妥靜脈輸注濃縮液（CAMPTO CONC. SOLUTION FOR I.V. INFUSION）：肺癌、大腸癌、胃癌、胰臟癌的詳細介紹",
+                "author": "Cancerfree",
+                "no": 2221,
+                "date": "2024/11/11 05:54:00",
+                "tags": [
+                    "胃癌",
+                    "癌症",
+                    "藥物治療",
+                    "抗癌妥靜脈輸注濃縮液",
+                    "肺癌",
+                    "胰臟癌",
+                    "輝瑞",
+                    "CAMPTO",
+                    "大腸癌",
+                    "癌症藥物介紹",
+                    "伊立諾替康"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Pancreatic Cancer",
+                    "Colorectal Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "關於癌可癒 靜脈輸注濃縮液 20 毫克/毫升的全面簡介",
+                "author": "Cancerfree",
+                "no": 2222,
+                "date": "2024/11/11 05:53:00",
+                "tags": [
+                    "胃癌",
+                    "腫瘤學",
+                    "癌症治療",
+                    "醫療",
+                    "醫藥",
+                    "Irinotecan",
+                    "肺癌",
+                    "癌可癒靜脈輸注濃縮液",
+                    "胰臟癌",
+                    "大腸直腸癌",
+                    "永信藥品工業股份有限公司",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Pancreatic Cancer",
+                    "Colorectal Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "喜康寧靜脈輸注濃縮液 20毫克/毫升 (Herocan Conc. Solution for I.V. Infusion 20 mg/ml) 藥物介紹與應用",
+                "author": "Cancerfree",
+                "no": 2223,
+                "date": "2024/11/11 05:52:00",
+                "tags": [
+                    "癌症",
+                    "抗癌藥",
+                    "靜脈輸注",
+                    "喜康寧靜脈輸注濃縮液",
+                    "癌症藥物介紹",
+                    "伊利諾替康",
+                    "風濕病"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Pancreatic Cancer",
+                    "Colorectal Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -525,10 +721,32 @@
                     "失敗療程"
                 ],
                 "website": [
-                    "Gastric Cancer",
                     "Lung Cancer",
                     "Pancreatic Cancer",
-                    "Colorectal Cancer"
+                    "Colorectal Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "『杏輝』艾益康靜脈輸注液：多種癌症的關鍵治療藥物",
+                "author": "Cancerfree",
+                "no": 2225,
+                "date": "2024/11/11 05:49:00",
+                "tags": [
+                    "藥物介紹",
+                    "藥物作用機制",
+                    "癌症治療",
+                    "病患指導",
+                    "癌症藥物介紹",
+                    "用藥須知",
+                    "『杏輝』艾益康靜脈輸注液",
+                    "臨床研究實證"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Pancreatic Cancer",
+                    "Colorectal Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -548,10 +766,35 @@
                     "IRINOTECAN HYDROCHLORIDE TRIHYDRATE"
                 ],
                 "website": [
-                    "Gastric Cancer",
                     "Lung Cancer",
                     "Pancreatic Cancer",
-                    "Colorectal Cancer"
+                    "Colorectal Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "怡諾肯注射劑 (Irinotecan Mylan) 介紹",
+                "author": "Cancerfree",
+                "no": 2227,
+                "date": "2024/11/11 05:47:00",
+                "tags": [
+                    "藥物介紹",
+                    "怡諾肯注射劑",
+                    "Irinotecan Mylan",
+                    "作用機制",
+                    "胰臟癌",
+                    "大腸癌",
+                    "直腸癌",
+                    "臨床研究",
+                    "癌症藥物介紹",
+                    "用藥須知",
+                    "邁蘭"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Pancreatic Cancer",
+                    "Colorectal Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -570,10 +813,32 @@
                     "癌症藥物介紹"
                 ],
                 "website": [
-                    "Gastric Cancer",
                     "Lung Cancer",
                     "Pancreatic Cancer",
-                    "Colorectal Cancer"
+                    "Colorectal Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "全面解析\"霖揚\"愛萊諾迪肯注射液20毫克/毫升使用於各類癌症之介紹與治療",
+                "author": "Cancerfree",
+                "no": 2229,
+                "date": "2024/11/11 05:44:00",
+                "tags": [
+                    "抗癌藥物",
+                    "癌症",
+                    "愛萊諾迪肯",
+                    "腸癌",
+                    "癌症藥物介紹",
+                    "霖揚生技製藥股份有限公司",
+                    "晚期癌症",
+                    "眼科"
+                ],
+                "website": [
+                    "Lung Cancer",
+                    "Pancreatic Cancer",
+                    "Colorectal Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -597,6 +862,28 @@
                 ]
             },
             {
+                "titles": "完整導讀：健仕平山德士40毫克/毫升注射劑在癌症治療中的應用",
+                "author": "Cancerfree",
+                "no": 2238,
+                "date": "2024/11/11 05:34:00",
+                "tags": [
+                    "藥物介紹",
+                    "癌症治療藥物",
+                    "非小細胞肺癌",
+                    "醫藥保健",
+                    "癌症藥物介紹",
+                    "健仕平\\\"山德士\\\"40毫克/毫升注射劑",
+                    "癌症疾病"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Ovarian Cancer",
+                    "Pancreatic Cancer",
+                    "Non-small cell Lung Cancer",
+                    "Bladder Cancer"
+                ]
+            },
+            {
                 "titles": "精讀“卡比”健彌達靜脈凍晶注射劑（Gemita Lyophilized for Injection）用於治療各種癌症",
                 "author": "Cancerfree",
                 "no": 2239,
@@ -606,9 +893,9 @@
                     "藥物",
                     "Gemcitabine",
                     "健彌達靜脈凍晶注射劑",
-                    "非小細胞肺癌",
-                    "胰臟癌",
                     "乳癌",
+                    "胰臟癌",
+                    "非小細胞肺癌",
                     "膀胱癌",
                     "breast cancer",
                     "癌症藥物介紹",
@@ -617,12 +904,12 @@
                     "long cancer"
                 ],
                 "website": [
-                    "Liver Cancer",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
+                    "Esophageal Cancer",
                     "Pancreatic Cancer",
-                    "Breast Cancer",
-                    "Esophageal Cancer"
+                    "Liver Cancer"
                 ]
             },
             {
@@ -635,20 +922,20 @@
                     "健達必凍晶注射劑",
                     "非小細胞肺癌",
                     "DBL Gemcitabine",
+                    "乳癌",
                     "卵巢癌",
                     "胰臟癌",
-                    "乳癌",
                     "膀胱癌",
                     "癌症藥物介紹",
                     "Gemcitabine hydrochloride"
                 ],
                 "website": [
-                    "Liver Cancer",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
+                    "Esophageal Cancer",
                     "Pancreatic Cancer",
-                    "Breast Cancer",
-                    "Esophageal Cancer"
+                    "Liver Cancer"
                 ]
             },
             {
@@ -660,8 +947,8 @@
                     "藥物介紹",
                     "癌症治療",
                     "健彌達靜脈凍晶注射劑",
-                    "非小細胞肺癌",
                     "胰臟癌",
+                    "非小細胞肺癌",
                     "臨床研究",
                     "癌症藥物介紹",
                     "用藥須知",
@@ -669,10 +956,10 @@
                     "藥物適用"
                 ],
                 "website": [
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
                     "Pancreatic Cancer",
-                    "Breast Cancer",
                     "Non-small cell Lung Cancer",
                     "Bladder Cancer"
                 ]
@@ -692,12 +979,40 @@
                     "治療原則"
                 ],
                 "website": [
-                    "Liver Cancer",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
+                    "Esophageal Cancer",
                     "Pancreatic Cancer",
+                    "Liver Cancer"
+                ]
+            },
+            {
+                "titles": "雙福全靜脈注射劑 (Gemflor for Injection)：一款治療乳癌、肺癌等多種癌症的藥物",
+                "author": "Cancerfree",
+                "no": 2243,
+                "date": "2024/11/11 05:29:00",
+                "tags": [
+                    "抗癌",
+                    "癌症治療",
+                    "乳癌",
+                    "肺癌",
+                    "雙福全靜脈注射劑",
+                    "卵巢癌",
+                    "藥物效果",
+                    "癌症藥物介紹",
+                    "GEMCITABINE HYDROCHLORIDE",
+                    "Gemflor for Injection",
+                    "藥華醫藥股份有限公司",
+                    "杏林新生製藥股份有限公司"
+                ],
+                "website": [
                     "Breast Cancer",
-                    "Esophageal Cancer"
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Esophageal Cancer",
+                    "Pancreatic Cancer",
+                    "Liver Cancer"
                 ]
             },
             {
@@ -717,12 +1032,35 @@
                     "Liver Cancer"
                 ],
                 "website": [
-                    "Liver Cancer",
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Esophageal Cancer",
+                    "Pancreatic Cancer",
+                    "Liver Cancer"
+                ]
+            },
+            {
+                "titles": "一覽無遺的介紹：健賽特平\"泰和碩\"注射劑在臨床癌症治熱上的使用",
+                "author": "Cancerfree",
+                "no": 2245,
+                "date": "2024/11/11 05:26:00",
+                "tags": [
+                    "Chemotherapy",
+                    "Non-Small Cell Lung Cancer",
+                    "癌症藥物介紹",
+                    "Pancreatic cancer",
+                    "Bladder cancer",
+                    "Ovarian Cancer After Platinum Therapy",
+                    "Gemcitabine hydrochloride",
+                    "Gemcitabine Taxo"
+                ],
+                "website": [
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
                     "Pancreatic Cancer",
-                    "Breast Cancer",
-                    "Esophageal Cancer"
+                    "Liver Cancer"
                 ]
             },
             {
@@ -2149,17 +2487,17 @@
                     "網路資源"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
+                    "Brain tumor",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
-                    "Pancreatic Cancer",
-                    "Prostate Cancer",
-                    "Breast Cancer",
                     "Esophageal Cancer",
+                    "Pancreatic Cancer",
+                    "Oral Cancer",
+                    "Prostate Cancer",
                     "Colorectal Cancer",
-                    "Brain tumor",
-                    "Oral Cancer"
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -2176,17 +2514,17 @@
                     "醫療政策"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
+                    "Brain tumor",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
-                    "Pancreatic Cancer",
-                    "Prostate Cancer",
-                    "Breast Cancer",
                     "Esophageal Cancer",
+                    "Pancreatic Cancer",
+                    "Oral Cancer",
+                    "Prostate Cancer",
                     "Colorectal Cancer",
-                    "Brain tumor",
-                    "Oral Cancer"
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -2263,17 +2601,17 @@
                     "病患照護"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
+                    "Brain tumor",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
-                    "Pancreatic Cancer",
-                    "Prostate Cancer",
-                    "Breast Cancer",
                     "Esophageal Cancer",
+                    "Pancreatic Cancer",
+                    "Oral Cancer",
+                    "Prostate Cancer",
                     "Colorectal Cancer",
-                    "Brain tumor",
-                    "Oral Cancer"
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -2292,17 +2630,17 @@
                     "生存品質"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
+                    "Brain tumor",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
-                    "Pancreatic Cancer",
-                    "Prostate Cancer",
-                    "Breast Cancer",
                     "Esophageal Cancer",
+                    "Pancreatic Cancer",
+                    "Oral Cancer",
+                    "Prostate Cancer",
                     "Colorectal Cancer",
-                    "Brain tumor",
-                    "Oral Cancer"
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
