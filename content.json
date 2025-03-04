@@ -65,19 +65,44 @@
                     "癌症治療",
                     "繁體中文",
                     "克莫抗癌注射劑",
-                    "肺癌",
-                    "肝癌",
                     "乳癌",
+                    "肝癌",
+                    "肺癌",
                     "食道癌",
                     "癌症藥物介紹",
                     "藥物教程"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
-                    "Lung Cancer",
                     "Breast Cancer",
-                    "Esophageal Cancer"
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "鉑力定注射劑對於癌症治療的應用",
+                "author": "Cancerfree",
+                "no": 2072,
+                "date": "2024/11/17 23:36:00",
+                "tags": [
+                    "化療",
+                    "癌症治療",
+                    "鉑力定注射劑１０公絲",
+                    "CISPLATIN-TEVA INJECTION 10MG",
+                    "癌症藥物介紹",
+                    "轉移性睪丸瘤",
+                    "卵巢瘤",
+                    "膀胱瘤",
+                    "前列腺骨",
+                    "軟組織瘤"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -1112,14 +1137,14 @@
                 "date": "2024/11/11 05:25:00",
                 "tags": [
                     "抗癌藥物",
-                    "肺癌",
-                    "肝癌",
                     "Gemcitabine",
-                    "Gemtero",
-                    "非小細胞肺癌",
-                    "卵巢癌",
-                    "胰臟癌",
                     "乳癌",
+                    "肝癌",
+                    "卵巢癌",
+                    "肺癌",
+                    "Gemtero",
+                    "胰臟癌",
+                    "非小細胞肺癌",
                     "膀胱癌",
                     "食道癌",
                     "癌症藥物介紹",
@@ -1127,12 +1152,40 @@
                     "凱沛爾藥品"
                 ],
                 "website": [
-                    "Liver Cancer",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
+                    "Esophageal Cancer",
                     "Pancreatic Cancer",
+                    "Liver Cancer"
+                ]
+            },
+            {
+                "titles": "全面瞭解珍喜得平凍晶注射劑的醫學用途和應用範圍",
+                "author": "Cancerfree",
+                "no": 2247,
+                "date": "2024/11/11 05:24:00",
+                "tags": [
+                    "藥物介紹",
+                    "癌症治療",
+                    "乳癌",
+                    "卵巢癌",
+                    "胰臟癌",
+                    "非小細胞肺癌",
+                    "膀胱癌",
+                    "臨床研究",
+                    "癌症藥物介紹",
+                    "用藥須知",
+                    "膽道癌",
+                    "GEMCITABINE"
+                ],
+                "website": [
                     "Breast Cancer",
-                    "Esophageal Cancer"
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Esophageal Cancer",
+                    "Pancreatic Cancer",
+                    "Liver Cancer"
                 ]
             },
             {
@@ -1154,12 +1207,41 @@
                     "癌症藥物介紹"
                 ],
                 "website": [
-                    "Liver Cancer",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
+                    "Esophageal Cancer",
                     "Pancreatic Cancer",
+                    "Liver Cancer"
+                ]
+            },
+            {
+                "titles": "全面了解「霖揚」吉西他濱凍晶注射劑200毫克 - 一種關鍵的癌症治療藥物",
+                "author": "Cancerfree",
+                "no": 2249,
+                "date": "2024/11/11 05:22:00",
+                "tags": [
+                    "癌症治療",
+                    "乳癌",
+                    "卵巢癌",
+                    "胰臟癌",
+                    "非小細胞肺癌",
+                    "膀胱癌",
+                    "癌症藥物介紹",
+                    "霖揚生技製藥股份有限公司",
+                    "膽道癌",
+                    "霖揚吉西他濱",
+                    "吉西他濱注射液",
+                    "吉西他濱作用機制",
+                    "吉西他濱適應症"
+                ],
+                "website": [
                     "Breast Cancer",
-                    "Esophageal Cancer"
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Esophageal Cancer",
+                    "Pancreatic Cancer",
+                    "Liver Cancer"
                 ]
             },
             {
@@ -1650,6 +1732,31 @@
                 ]
             },
             {
+                "titles": "癌佐莓注射液 (Adrim Injection) 於肺癌、乳癌、卵巢癌、胃癌、肝癌的應用介紹",
+                "author": "Cancerfree",
+                "no": 2293,
+                "date": "2024/11/11 04:23:00",
+                "tags": [
+                    "胃癌",
+                    "癌佐莓注射液",
+                    "乳癌",
+                    "肝癌",
+                    "卵巢癌",
+                    "肺癌",
+                    "癌症藥物介紹",
+                    "台灣費森尤斯卡比股份有限公司",
+                    "FRESENIUS KABI ONCOLOGY LIMITED",
+                    "DOXORUBICIN HCL"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
                 "titles": "阿雷素凍晶注射劑５０公絲/小瓶 (DOXORUBICIN HCL FOR INJECTION",
                 "author": "Cancerfree",
                 "no": 2297,
@@ -1729,6 +1836,51 @@
                 ]
             },
             {
+                "titles": "待朗必信靜脈凍晶注射劑５０公絲(DOXORUBICIN MDIJI FOR I.V. INJECTION 50MG)詳解",
+                "author": "Cancerfree",
+                "no": 2301,
+                "date": "2024/11/11 04:13:00",
+                "tags": [
+                    "lung cancer",
+                    "chemotherapy",
+                    "gastric cancer",
+                    "breast cancer",
+                    "liver cancer",
+                    "癌症藥物介紹",
+                    "待朗必信靜脈凍晶注射劑５０公絲(DOXORUBICIN MDIJI FOR I.V. INJECTION 50MG)",
+                    "大明產業股份有限公司",
+                    "drug mechanism",
+                    "DONG-A PHARMACEUTICAL CO.",
+                    "LTD. (ANYANG FACTORY)"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "德壽魯素注射液２公絲/１公撮應用於多種癌症的治療：以臨床實證的角度深度解析",
+                "author": "Cancerfree",
+                "no": 2302,
+                "date": "2024/11/11 04:12:00",
+                "tags": [
+                    "化療藥物",
+                    "癌症治療",
+                    "德壽魯素",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
                 "titles": "速溶艾黴素注射劑50公絲 (ADRIBLASTINA RAPID DISSOLUTION 50MG)：一種針對肺癌、乳癌、卵巢癌、胃癌、肝癌的綜合介紹",
                 "author": "Cancerfree",
                 "no": 2303,
@@ -1736,21 +1888,51 @@
                 "tags": [
                     "胃癌",
                     "化療藥物",
-                    "肺癌",
+                    "乳癌",
                     "肝癌",
                     "卵巢癌",
-                    "乳癌",
+                    "肺癌",
                     "ADRIBLASTINA RAPID DISSOLUTION 50MG",
                     "癌症藥物介紹",
                     "輝瑞大藥廠股份有限公司",
                     "速溶艾黴素注射劑50公絲"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
-                    "Breast Cancer"
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "速溶艾黴素注射劑10毫克 (Adriblastina Rapid Dissolution 10mg) 的全面介紹",
+                "author": "Cancerfree",
+                "no": 2304,
+                "date": "2024/11/11 04:09:00",
+                "tags": [
+                    "化療",
+                    "抗癌",
+                    "癌症治療",
+                    "癌症",
+                    "藥物治療",
+                    "速溶艾黴素注射劑10毫克",
+                    "乳癌",
+                    "肺癌",
+                    "淋巴瘤",
+                    "癌症藥物介紹",
+                    "ACTAVIS ITALY S.P.A.",
+                    "輝瑞大藥廠股份有限公司",
+                    "久裕企業股份有限公司",
+                    "白血球過多症",
+                    "硬瘤"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -1764,20 +1946,74 @@
                     "癌症治療",
                     "達必素注射劑",
                     "DOXORUBICIN-BRISTOL",
-                    "肺癌",
+                    "乳癌",
                     "肝癌",
                     "卵巢癌",
-                    "乳癌",
+                    "肺癌",
                     "臨床研究",
                     "癌症藥物介紹",
                     "藥物機制"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
-                    "Breast Cancer"
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "德壽魯素注射劑 (Doxorubicin Hydrochloride for Injection \"DBL\") 在肺癌、乳癌、卵巢癌、胃癌、肝癌治療中的使用",
+                "author": "Cancerfree",
+                "no": 2306,
+                "date": "2024/11/11 04:06:00",
+                "tags": [
+                    "胃癌",
+                    "化療",
+                    "德壽魯素",
+                    "乳癌",
+                    "肝癌",
+                    "卵巢癌",
+                    "肺癌",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "艾黴素注射劑50公絲 (Adriblastina 50mg)：一種用於肺癌、乳癌、卵巢癌、胃癌、肝癌的綜合導讀",
+                "author": "Cancerfree",
+                "no": 2307,
+                "date": "2024/11/11 03:56:00",
+                "tags": [
+                    "抗癌藥物",
+                    "癌症治療",
+                    "靜脈注射",
+                    "肺癌",
+                    "臨床試驗",
+                    "乳癌",
+                    "淋巴瘤",
+                    "癌症藥物介紹",
+                    "硬瘤",
+                    "軟纖維性肉瘤",
+                    "交感神經母細胞瘤",
+                    "急慢性白血球過多症",
+                    "艾黴素注射劑５０公絲 (ADRIBLASTINA 50MG)",
+                    "道可唑魯比西 (DOXORUBICIN HCL)",
+                    "法瑪西亞股份有限公司",
+                    "PHARMACIA & UPJOHN S.P.A."
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -1790,22 +2026,22 @@
                     "藥物介紹",
                     "癌症治療",
                     "艾黴素注射劑",
-                    "肺癌",
-                    "肝癌",
-                    "ADRIBLASTINA",
-                    "卵巢癌",
-                    "作用機制",
                     "乳癌",
+                    "肝癌",
+                    "卵巢癌",
+                    "肺癌",
+                    "ADRIBLASTINA",
+                    "作用機制",
                     "臨床研究",
                     "癌症藥物介紹",
                     "用藥須知"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
-                    "Breast Cancer"
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -1819,23 +2055,23 @@
                     "癌症治療",
                     "力得微脂體注射劑",
                     "適應症",
-                    "肺癌",
+                    "乳癌",
                     "肝癌",
-                    "藥物簡介",
                     "卵巢癌",
+                    "肺癌",
+                    "藥物簡介",
                     "藥物用法",
                     "作用機制",
-                    "乳癌",
                     "臨床研究",
                     "癌症藥物介紹",
                     "杜薩魯比辛"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
-                    "Breast Cancer"
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -1857,11 +2093,200 @@
                     "急慢性白血球過多症"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
+                    "Breast Cancer",
                     "Lung Cancer",
                     "Ovarian Cancer",
-                    "Breast Cancer"
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "多受祿凍晶注射劑(Doxorubicin Mylan)：全面介紹與深入分析",
+                "author": "Cancerfree",
+                "no": 2311,
+                "date": "2024/11/11 03:50:00",
+                "tags": [
+                    "癌症",
+                    "多受祿凍晶注射劑",
+                    "Doxorubicin",
+                    "乳癌",
+                    "肺癌",
+                    "淋巴瘤",
+                    "臨床研究",
+                    "藥物敏感性測試",
+                    "癌症藥物介紹",
+                    "白血球過多症",
+                    "硬瘤",
+                    "軟纖維性肉瘤"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "德露斯微脂體注射劑2毫克/毫升(DOXLOX): 一種多癌症治療藥物的全面介紹",
+                "author": "Cancerfree",
+                "no": 2312,
+                "date": "2024/11/11 03:49:00",
+                "tags": [
+                    "胃癌",
+                    "藥物介紹",
+                    "抗癌藥物",
+                    "癌症",
+                    "乳癌",
+                    "肝癌",
+                    "卵巢癌",
+                    "肺癌",
+                    "作用機制",
+                    "臨床研究",
+                    "癌症藥物介紹",
+                    "治療適應症",
+                    "用藥須知",
+                    "總結展望",
+                    "德露斯微脂體注射劑2毫克/毫升(DOXLOX)"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "精金德舒癌注射液2毫克/毫升在多種癌症治療中的應用",
+                "author": "Cancerfree",
+                "no": 2313,
+                "date": "2024/11/11 03:48:00",
+                "tags": [
+                    "lung cancer",
+                    "ovarian cancer",
+                    "cancer treatment",
+                    "anticancer",
+                    "gastric cancer",
+                    "breast cancer",
+                    "liver cancer",
+                    "癌症藥物介紹",
+                    "精金\"德舒癌注射液",
+                    "doxorubicin hcl",
+                    "injection solution"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "克思癌微脂體注射劑2毫克/毫升(鹽酸杜薩魯比辛)的臨床應用與效果分析",
+                "author": "Cancerfree",
+                "no": 2314,
+                "date": "2024/11/11 03:46:00",
+                "tags": [
+                    "胃癌",
+                    "抗癌藥物",
+                    "癌症藥物",
+                    "癌症治療",
+                    "化學治療",
+                    "克思癌微脂體注射劑2毫克/毫升",
+                    "鹽酸杜薩魯比辛",
+                    "肝癌",
+                    "卵巢癌",
+                    "肺癌",
+                    "乳腺癌",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "多受祿注射劑2毫克/毫升 (Doxorubicin Mylan) 於肺癌、乳癌、卵巢癌、胃癌、肝癌的使用介紹",
+                "author": "Cancerfree",
+                "no": 2315,
+                "date": "2024/11/11 03:45:00",
+                "tags": [
+                    "胃癌",
+                    "化療藥物",
+                    "抗腫瘤藥物",
+                    "多受祿",
+                    "Doxorubicin",
+                    "乳癌",
+                    "肝癌",
+                    "卵巢癌",
+                    "肺癌",
+                    "淋巴瘤",
+                    "癌症藥物介紹",
+                    "台灣邁蘭有限公司",
+                    "復黴素",
+                    "軟纖維瘤"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "霖揚鹽酸杜薩魯比辛凍晶注射劑10毫克（Doxorubicin Hydrochloride Lyophilized Inj. 10mg \"GBC\"）之使用介紹",
+                "author": "Cancerfree",
+                "no": 2316,
+                "date": "2024/11/11 03:44:00",
+                "tags": [
+                    "藥物介紹",
+                    "癌症治療",
+                    "鹽酸杜薩魯比辛",
+                    "乳癌",
+                    "肺癌",
+                    "癌症藥物介紹",
+                    "霖揚生技製藥股份有限公司",
+                    "藥品使用指南"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "「意欣」杜索拉凍晶注射劑 (Doxora Lyophilized Injection \\\"L.L.\\\")在肺癌、乳癌、卵巢癌、胃癌、肝癌中的綜述",
+                "author": "Cancerfree",
+                "no": 2317,
+                "date": "2024/11/11 03:43:00",
+                "tags": [
+                    "胃癌",
+                    "藥物作用機制",
+                    "抗癌藥物",
+                    "化學療法",
+                    "乳癌",
+                    "肝癌",
+                    "卵巢癌",
+                    "肺癌",
+                    "意欣杜索拉凍晶注射劑",
+                    "癌症藥物介紹",
+                    "DOXORUBICIN HCL",
+                    "Doxora"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Ovarian Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -2306,11 +2731,11 @@
                     "癌症藥物介紹"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
-                    "Lung Cancer",
                     "Breast Cancer",
-                    "Esophageal Cancer"
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -2328,11 +2753,11 @@
                     "轉移性膀胱內型細胞腫瘤"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
-                    "Lung Cancer",
                     "Breast Cancer",
-                    "Esophageal Cancer"
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
@@ -2344,8 +2769,8 @@
                     "胃癌",
                     "癌症治療",
                     "希思鉑定注射液",
-                    "肺癌",
                     "肝癌",
+                    "肺癌",
                     "CISPLATIN INJECTION 1MG/ML",
                     "乳腺癌",
                     "作用機制",
@@ -2356,11 +2781,326 @@
                     "治療適應症"
                 ],
                 "website": [
-                    "Gastric Cancer",
-                    "Liver Cancer",
-                    "Lung Cancer",
                     "Breast Cancer",
-                    "Esophageal Cancer"
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "阿樂癌注射液０．５公絲/公撮 (ABIPLATIN INJECTION 0.5MG/ML) 介紹",
+                "author": "Cancerfree",
+                "no": 2341,
+                "date": "2024/11/11 03:10:00",
+                "tags": [
+                    "藥物介紹",
+                    "CISPLATIN",
+                    "癌症治療",
+                    "阿樂癌",
+                    "癌症藥物介紹",
+                    "轉移性睪丸腫瘤",
+                    "膀胱內轉移型細胞腫瘤",
+                    "轉移性卯巢腫瘤"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "西伯拉丁注射液 (CISPLATIN INJECTION \"DBL\") 對於腺癌的應用",
+                "author": "Cancerfree",
+                "no": 2342,
+                "date": "2024/11/11 03:09:00",
+                "tags": [
+                    "胃癌",
+                    "抗癌",
+                    "西伯拉丁注射液",
+                    "藥物治療",
+                    "乳癌",
+                    "肝癌",
+                    "肺癌",
+                    "食道癌",
+                    "腺癌",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "喜賜康注射液0.5毫克/毫升 (CISPLATIN-EBEWE 0.5MG/ML INJECTION)在肺癌、乳癌、食管癌、胃癌與肝癌治療中的使用",
+                "author": "Cancerfree",
+                "no": 2343,
+                "date": "2024/11/11 03:08:00",
+                "tags": [
+                    "胃癌",
+                    "CISPLATIN",
+                    "癌症",
+                    "喜賜康",
+                    "化學療法",
+                    "乳癌",
+                    "肝癌",
+                    "肺癌",
+                    "CISPLATIN-EBEWE 0.5MG/ML INJECTION",
+                    "食道癌",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "普樂得星注射液０．５公絲/公撮 (PLATOSIN INJECTION (0.5MG/ML)) 綜合介紹",
+                "author": "Cancerfree",
+                "no": 2344,
+                "date": "2024/11/11 03:07:00",
+                "tags": [
+                    "抗癌藥物",
+                    "CISPLATIN",
+                    "普樂得星注射液",
+                    "藥物敏感性測試",
+                    "癌症藥物介紹",
+                    "轉移性睪丸腫瘤",
+                    "轉移性卵巢腫瘤",
+                    "民橋企業股份有限公司",
+                    "PHARMACHEMIE B.V."
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "喜賜康注射液０．５公絲/公撮及其在癌症治療中的應用",
+                "author": "Cancerfree",
+                "no": 2345,
+                "date": "2024/11/11 03:06:00",
+                "tags": [
+                    "胃癌",
+                    "抗癌藥物",
+                    "CISPLATIN",
+                    "癌症治療",
+                    "癌症",
+                    "CISOLATIN-EBEWE 0.5MG/ML INJECTION",
+                    "喜賜康",
+                    "腫瘤",
+                    "肝癌",
+                    "肺癌",
+                    "乳腺癌",
+                    "食道癌",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "壓保淨注射液０．５公絲/公撮 (ABIPLATIN 0.5MG/ML)：關於藥物的全面介紹",
+                "author": "Cancerfree",
+                "no": 2346,
+                "date": "2024/11/11 03:05:00",
+                "tags": [
+                    "胃癌",
+                    "治療",
+                    "CISPLATIN",
+                    "壓保淨注射液０．５公絲/公撮",
+                    "肝癌",
+                    "肺癌",
+                    "ABIPLATIN 0.5MG/ML",
+                    "乳腺癌",
+                    "食道癌",
+                    "癌症藥物介紹",
+                    "抗惡性腫瘍劑"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "鉑帝爾注射液０．５公絲/公撮 (PLATINOL INJECTION 0.5MG/ML)對於癌症的全面介紹",
+                "author": "Cancerfree",
+                "no": 2347,
+                "date": "2024/11/11 03:03:00",
+                "tags": [
+                    "胃癌",
+                    "CISPLATIN",
+                    "鉑帝爾注射液０．５公絲/公撮",
+                    "癌症治療藥物",
+                    "肝癌",
+                    "肺癌",
+                    "乳腺癌",
+                    "食道癌",
+                    "癌症藥物介紹",
+                    "臺灣必治妥施貴寶股份有限公司",
+                    "BRISTOL-MYERS S.A.E.",
+                    "PLATINOL INJECTION 0.5MG/ML",
+                    "BRISTOL-MYERS SQUIBB S.R.L."
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "關於鉑特敏靜脈凍晶注射劑５０公絲 (PLATAMINE FOR IV INJECTION 50MG)之深度介紹",
+                "author": "Cancerfree",
+                "no": 2348,
+                "date": "2024/11/11 03:02:00",
+                "tags": [
+                    "CISPLATIN",
+                    "癌症藥物介紹",
+                    "輝瑞大藥廠",
+                    "卵巢腫瘤",
+                    "鉑特敏",
+                    "PLATAMINE FOR IV INJECTION 50MG",
+                    "台灣癌症治療",
+                    "睪丸腫瘤",
+                    "鱗狀細胞癌",
+                    "藥物回顧",
+                    "治療用藥介紹",
+                    "用藥知識"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "壓保淨注射液 (ABIPLATIN 0.5MG/ML) 綜述: 治療肺癌",
+                "author": "Cancerfree",
+                "no": 2349,
+                "date": "2024/11/11 03:01:00",
+                "tags": [
+                    "胃癌",
+                    "藥物介紹",
+                    "化療",
+                    "醫學",
+                    "抗癌藥物",
+                    "CISPLATIN",
+                    "癌症治療",
+                    "乳癌",
+                    "肝癌",
+                    "肺癌",
+                    "壓保淨注射液",
+                    "食管癌",
+                    "臨床研究",
+                    "癌症藥物介紹"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "全面解析：利克癌注射液 (RANDA INJECTION) 在肺癌、乳癌、食道癌、胃癌、肝癌的應用",
+                "author": "Cancerfree",
+                "no": 2350,
+                "date": "2024/11/11 03:00:00",
+                "tags": [
+                    "肝癌",
+                    "胃癌",
+                    "乳腺癌",
+                    "食道癌",
+                    "癌症藥物介紹",
+                    "重症肺炎",
+                    "腎或尿道腫瘍"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "壓保淨凍晶注射劑２５公絲在癌症治療中的工作原理和效果",
+                "author": "Cancerfree",
+                "no": 2351,
+                "date": "2024/11/11 02:59:00",
+                "tags": [
+                    "胃癌",
+                    "抗腫瘤藥物",
+                    "CISPLATIN",
+                    "癌症治療",
+                    "壓保淨凍晶注射劑２５公絲",
+                    "藥品介紹",
+                    "肝癌",
+                    "肺癌",
+                    "乳腺癌",
+                    "食道癌",
+                    "癌症藥物介紹",
+                    "轉移性睾丸腫瘤",
+                    "卵巢腫瘤"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
+                ]
+            },
+            {
+                "titles": "壓保淨凍晶注射劑５０公絲 (ABIPLATIN LYOPHILIZED POWDER FOR INJECTION 50MG)：多種癌症的全面介紹",
+                "author": "Cancerfree",
+                "no": 2352,
+                "date": "2024/11/11 02:58:00",
+                "tags": [
+                    "胃癌",
+                    "抗癌藥物",
+                    "CISPLATIN",
+                    "癌症治療",
+                    "乳癌",
+                    "肝癌",
+                    "肺癌",
+                    "壓保淨凍晶注射劑",
+                    "臨床研究",
+                    "食道癌",
+                    "癌症藥物介紹",
+                    "卵巢腫瘤",
+                    "用藥須知",
+                    "睾丸腫瘤"
+                ],
+                "website": [
+                    "Breast Cancer",
+                    "Lung Cancer",
+                    "Esophageal Cancer",
+                    "Liver Cancer",
+                    "Gastric Cancer"
                 ]
             },
             {
