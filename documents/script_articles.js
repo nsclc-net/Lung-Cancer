@@ -393,31 +393,3 @@ function adjustSidebarHeight() {
 
 window.addEventListener('load', adjustSidebarHeight);
 window.addEventListener('resize', adjustSidebarHeight);
-
-document.addEventListener('click', (event) =>{ 
-    const anchor = event.target.closest('a')
-    if (anchor){
-        event.preventDefault();
-        console.log('detect_click\n');
-        console.log(anchor.href);
-        fetch('https://383a-104-199-172-31.ngrok-free.app/track_url', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ url: anchor.href })
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .catch(error => {
-            console.error('Fetch error:', error)
-        })
-        .finally(() => {
-            window.open(anchor.href, '_blank'); // Navigate after tracking
-        });
-    }
-});
