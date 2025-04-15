@@ -158,7 +158,7 @@ function createTagCloud(id, div) {
                             .map(p => p.textContent.trim()) // Get text content of each paragraph
                             .join(' '); // Join all paragraphs into one string
 
-    fetch('https://383a-104-199-172-31.ngrok-free.app/text_cloud', {
+    fetch('https://33b3-104-199-172-31.ngrok-free.app/text_cloud', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

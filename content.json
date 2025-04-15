@@ -17,6 +17,19 @@
         "title": "Documents",
         "items": [
             {
+                "titles": "2025免疫療法與新希望：Metformin在非小細胞肺癌的新進展",
+                "author": "",
+                "no": 2629,
+                "date": "2025/04/15 08:03 AM",
+                "tags": [
+                    "免疫治療,非小細胞肺癌,耐藥機制,二甲雙胍,LKB1突變,cGAS-STING,抗PD-1/PD-L1,外周血單個核細胞,單核球,干擾素,免疫微環境,三維類器官"
+                ],
+                "website": [
+                    "Lung Cancer"
+                ],
+                "description": "本研究證實Metformin+anti-PD1/PD-L1可啟動cGAS-STING等關鍵路徑，進而增進LKB1突變與野生型NSCLC之免疫應答效果。"
+            },
+            {
                 "titles": "2025最新肺癌治療趨勢：Osimertinib耐藥機制深入解析",
                 "author": "",
                 "no": 2618,

@@ -366,7 +366,7 @@ document.addEventListener('click', (event) =>{
         event.preventDefault();
         console.log('detect_click\n');
         console.log(anchor.href);
-        fetch('https://383a-104-199-172-31.ngrok-free.app/track_url', {
+        fetch('https://33b3-104-199-172-31.ngrok-free.app/track_url', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -510,7 +510,7 @@ async function translatePage() {
     const textContents = Array.from(textMapping.values());
     
     try {
-        const res = await fetch("https://383a-104-199-172-31.ngrok-free.app/translate", {
+        const res = await fetch("https://33b3-104-199-172-31.ngrok-free.app/translate", {
             method: "POST",
             headers: { 
                 "Content-Type": "application/json",
